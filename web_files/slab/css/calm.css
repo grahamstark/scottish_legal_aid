@@ -1,0 +1,163 @@
+body{
+		font-family: "Gill Sans", trebuchet ms, verdana, sans-serif;
+		font-size: 12px;
+		line-height: 1.5em;
+		color: black;
+		background: #ddcc99;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+}
+
+/* turn off borders round images */
+img {
+    border-style: none;       
+}
+
+a {
+ text-decoration: none;   
+}
+
+.popupbody{
+    width:100%;
+    padding:0.5%;
+    display:block;
+}
+
+.mainbody{
+    width:75%;
+    padding:0.5%;
+    display:block;
+    float:left;
+}
+
+.popupbody{
+    width:100%;
+    padding:0.5%;
+    display:block;
+}
+
+.contents{
+    background:#FFFBDF;
+    border:1px solid grey;
+    color:black;
+    padding: 0.5%;
+}
+
+.header{
+    height: 60px;
+    background: #103050;
+    margin:0;
+    padding: 1% 1% 0 1%;
+    color:white;
+}
+
+.menu{
+    padding:0.5%;
+    font-size: 12px;
+    color: #E5E0D4;
+    background: #707092;
+    letter-spacing: 0.2em;
+}
+
+.menu a, .submenu a{
+    color: yellow;   
+}
+
+.submenu{
+    padding: 0.5%;
+    font-size:12px;
+    background:#889;   
+    color: #EED;  
+    letter-spacing: 0.1em;
+    /*border-top: 1px dashed #ddd;*/
+}
+
+.sidearea{
+    width:22%;
+    display:block;
+    float:left;
+    padding: 0.5%;
+    margin: 0.5% 0.5% 0.5% 0;
+    background: #E5E0D4;
+    color: #333;
+    border: 1px solid grey;
+}
+
+.sidearea a:link{
+    color: #369;
+}
+
+h1 { font-weight: normal; font-size:150%; letter-spacing: 0.35em; }
+h2 { font-weight: bold; font-size:130%; }
+h3 { font-weight: bold; font-size:110%; }
+
+
+h1:first-letter{ color:red; font-size:110%; }
+h2:first-letter{ color:red; font-size:110%; }
+h3:first-letter{ color:red; font-size:110%; } 
+
+.footer{
+    text-align:center;
+    font-size:80%;
+}
+
+.sidearea a {    
+     display:block; 
+     /*padding: 4px 8px; 
+     margin:0; */
+	 text-decoration:none; 
+     text-align:left;
+}
+
+.sidearea a:hover { background: #b99; color:white; }
+/*border:1px solid #ebb; padding: 4px 8px; margin:0 }*/
+
+.menu a:hover, .submenu a:hover{ background: #E5E0D4; color:#222 }
+
+a:hover { background-color:  #b99; color: white;/* border:1px solid #333; padding:1px;*/ text-decoration:none }
+
+.nochange{
+    font-weight:bold;
+}
+
+.gaining, .gaining a:visited{
+    font-weight: bold;
+    color:#4A4;
+}
+
+.losing, .losing a:visited{
+    font-weight: bold;
+    color:#C44;
+}
+
+.macroerror{
+       display:block;
+       font-size: 14px;
+       font-weight: bold;
+       border: 2px solid grey;
+       background-color: #E5E0D4;
+       padding:2%;
+       width:95%;
+       float:left;
+}
+
+.error{
+    font-size:12px;
+    color: red;
+}
+
+input.changed_input{
+       color: black;
+       background-color: #9fe;       
+}
+
+input.error_input{
+       color: black;
+       background-color: #fa9;       
+}
+
+input.normal_input{
+       color: black;
+       background-color: #ffe;
+}

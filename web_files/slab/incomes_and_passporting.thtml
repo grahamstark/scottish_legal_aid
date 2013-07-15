@@ -1,0 +1,200 @@
+@@INCLUDE@@ header.inc  "Income and Capital Limits"
+<body>
+<div class="mainbody">
+<div class="header">
+    <h1>SCOTTISH LEGAL AID MODEL</h1>
+</div>
+
+<div class='menu'>
+<a href="/slab/intro_page.thtml"> Home </a>  &#187; Change Parameters &#171;  <a href="/slab/output/?action=display&amp;compare=totals"> View Results</a></div>
+<div class='submenu'>
+<a href="/slab/actions/?page=income_limits"> Income and Capital Limits</a> &bull;<a href="/slab/actions/?page=capital_disregards">Capital Disregards </a>  &bull; 
+ &#187; Incomes and Passporting&#171;  &bull; <a href="/slab/actions/?page=allowable_expenses">Allowable Expenses</a> &bull; 
+<a href="/slab/actions/?page=housing">Housing Costs</a>  &bull;
+<a href="/slab/actions/?page=contributions">Contributions</a>
+
+</div>
+
+
+
+<div class="contents">
+        <form action="/slab/actions/">
+        <input type='hidden' name='frm_benefits' value='frm_benefits' />
+
+<h3> Incomes and Passporting </h3>
+<p><em>@_run-name_@</em></p>
+
+<p>In the table below set the values to 1.0 for all income of that type to count as net or gross income; set to 0 for none; or set to 
+-1.0 for all deductable. (Or numbers in-between). For the benefits, set to 'yes' in the last column to make this a passported benefit.</p>
+<table>
+<tr><th></th><th>Net Income</th><th>Gross 'English Cap' Income</th><th>Passported?</th></tr>
+<tr class="tableRowEven"><td align="right">Wages</td><td>@_incomesList-wages_@</td>
+<td>@_gross_IncomesList-wages_@</td><td></td></tr>
+
+<tr class="tableRowOdd"><td align="right">Luncheon Vouchers</td><td>@_incomesList-luncheon_vouchers_@</td>
+<td>@_gross_IncomesList-luncheon_vouchers_@</td><td></td></tr>
+
+<tr class="tableRowEven"><td align="right">Self Employment</td><td>@_incomesList-self_employment_@</td>
+<td>@_gross_IncomesList-self_employment_@</td><td></td></tr>
+
+<tr class="tableRowOdd"><td align="right">investment_income</td><td>@_incomesList-investment_income_@</td>
+<td>@_gross_IncomesList-investment_income_@</td><td></td></tr>
+
+<tr class="tableRowEven"><td align="right">pensions</td><td>@_incomesList-pensions_@</td>
+<td>@_gross_IncomesList-pensions_@</td><td></td></tr>
+
+<tr class="tableRowOdd"><td align="right">Other Income</td><td>@_incomesList-other_income_@</td>
+<td>@_gross_IncomesList-other_income_@</td><td></td></tr>
+
+<tr class="tableRowEven"><td align="right">Income Tax</td><td>@_incomesList-income_tax_@</td>
+<td>@_gross_IncomesList-income_tax_@</td><td></td></tr>
+
+<tr class="tableRowOdd"><td align="right">National Insurance</td><td>@_incomesList-national_insurance_@</td>
+<td>@_gross_IncomesList-national_insurance_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Disability Living Allowance</td><td>@_incomesList-disability_living_allowance_@</td>
+<td>@_gross_IncomesList-disability_living_allowance_@</td>
+<td>@_passport_benefits-disability_living_allowance_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Attendance Allowance</td><td>@_incomesList-attendance_allowance_@</td>
+<td>@_gross_IncomesList-attendance_allowance_@</td>
+<td>@_passport_benefits-attendance_allowance_@</td></tr>
+
+
+<tr class="tableRowOdd"><td align="right">Constant Attendance Allowance</td><td>@_incomesList-constantattendance_allowance_@</td>
+<td>@_gross_IncomesList-constantattendance_allowance_@</td>
+<td>@_passport_benefits-constantattendance_allowance_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Social Fund</td><td>@_incomesList-social_fund_@</td>
+<td>@_gross_IncomesList-social_fund_@</td>
+<td>@_passport_benefits-social_fund_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Child Benefit</td><td>@_incomesList-child_benefit_@</td>
+<td>@_gross_IncomesList-child_benefit_@</td>
+<td>@_passport_benefits-child_benefit_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Guaranteed Pension Credit</td><td>@_incomesList-guaranteed_pension_credit_@</td>
+<td>@_gross_IncomesList-guaranteed_pension_credit_@</td>
+<td>@_passport_benefits-guaranteed_pension_credit_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Savings Pension Credit</td><td>@_incomesList-savings_pension_credit_@</td>
+<td>@_gross_IncomesList-savings_pension_credit_@</td>
+<td>@_passport_benefits-savings_pension_credit_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Retirement Pension</td><td>@_incomesList-retirement_pension_@</td>
+<td>@_gross_IncomesList-retirement_pension_@</td>
+<td>@_passport_benefits-retirement_pension_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Widows pensions</td><td>@_incomesList-widows_pensions_@</td>
+<td>@_gross_IncomesList-widows_pensions_@</td>
+<td>@_passport_benefits-widows_pensions_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Income Support</td><td>@_incomesList-income_support_@</td>
+<td>@_gross_IncomesList-income_support_@</td>
+<td>@_passport_benefits-income_support_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Maternity Allowance</td><td>@_incomesList-maternity_allowance_@</td>
+<td>@_gross_IncomesList-maternity_allowance_@</td>
+<td>@_passport_benefits-maternity_allowance_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Widowed Mothers Allowance</td><td>@_incomesList-widowed_mothers_allowance_@</td>
+<td>@_gross_IncomesList-widowed_mothers_allowance_@</td>
+<td>@_passport_benefits-widowed_mothers_allowance_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">War Disablement Pension</td><td>@_incomesList-war_disablement_pension_@</td>
+<td>@_gross_IncomesList-war_disablement_pension_@</td>
+<td>@_passport_benefits-war_disablement_pension_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">War Widow Pension</td><td>@_incomesList-war_widow_pension_@</td>
+<td>@_gross_IncomesList-war_widow_pension_@</td>
+<td>@_passport_benefits-war_widow_pension_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Severe Disability Allowance</td><td>@_incomesList-severe_disability_allowance_@</td>
+<td>@_gross_IncomesList-severe_disability_allowance_@</td>
+<td>@_passport_benefits-severe_disability_allowance_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Disabled Persons Tax Credit</td><td>@_incomesList-disabled_persons_tax_credit_@</td>
+<td>@_gross_IncomesList-disabled_persons_tax_credit_@</td>
+<td>@_passport_benefits-disabled_persons_tax_credit_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Invalid Care Allowance</td><td>@_incomesList-invalid_care_allowance_@</td>
+<td>@_gross_IncomesList-invalid_care_allowance_@</td>
+<td>@_passport_benefits-invalid_care_allowance_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Income RelatedJobseekers Allowance</td><td>@_incomesList-income_related_jobseekers_allowance_@</td>
+<td>@_gross_IncomesList-income_related_jobseekers_allowance_@</td>
+<td>@_passport_benefits-income_related_jobseekers_allowance_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Contributory Jobseekers Allowance</td><td>@_incomesList-contributory_jobseekers_allowance_@</td>
+<td>@_gross_IncomesList-contributory_jobseekers_allowance_@</td>
+<td>@_passport_benefits-contributory_jobseekers_allowance_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Industrial Injury Disablemen tBenefit</td><td>@_incomesList-industrial_injury_disablementBenefit_@</td>
+<td>@_gross_IncomesList-industrial_injury_disablementBenefit_@</td>
+<td>@_passport_benefits-industrial_injury_disablementBenefit_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Incapacity Benefit</td><td>@_incomesList-incapacity_benefit_@</td>
+<td>@_gross_IncomesList-incapacity_benefit_@</td>
+<td>@_passport_benefits-incapacity_benefit_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Working Families Tax Credit</td><td>@_incomesList-working_families_tax_credit_@</td>
+<td>@_gross_IncomesList-working_families_tax_credit_@</td>
+<td>@_passport_benefits-working_families_tax_credit_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">New Deal</td><td>@_incomesList-new_deal_@</td>
+<td>@_gross_IncomesList-new_deal_@</td>
+<td>@_passport_benefits-new_deal_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Working Tax Credit</td><td>@_incomesList-working_tax_credit_@</td>
+<td>@_gross_IncomesList-working_tax_credit_@</td>
+<td>@_passport_benefits-working_tax_credit_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Child Tax Credit</td><td>@_incomesList-child_tax_credit_@</td>
+<td>@_gross_IncomesList-child_tax_credit_@</td>
+<td>@_passport_benefits-child_tax_credit_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Any Other Benefit</td><td>@_incomesList-any_other_benefit_@</td>
+<td>@_gross_IncomesList-any_other_benefit_@</td>
+<td>@_passport_benefits-any_other_benefit_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Widows Payment</td><td>@_incomesList-widows_payment_@</td>
+<td>@_gross_IncomesList-widows_payment_@</td>
+<td>@_passport_benefits-widows_payment_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Unemployment Redundancy Insurance</td><td>@_incomesList-unemployment_redundancy_insurance_@</td>
+<td>@_gross_IncomesList-unemployment_redundancy_insurance_@</td>
+<td>@_passport_benefits-unemployment_redundancy_insurance_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Winter Fuel Payments</td><td>@_incomesList-winter_fuel_payments_@</td>
+<td>@_gross_IncomesList-winter_fuel_payments_@</td>
+<td>@_passport_benefits-winter_fuel_payments_@</td></tr>
+
+
+<tr class="tableRowOdd"><td align="right">trade_union</td><td>@_incomesList-trade_union_@</td>
+<td>@_gross_IncomesList-trade_union_@</td><td></td></tr>
+
+<tr class="tableRowEven"><td align="right">friendly_society_benefits</td><td>@_incomesList-friendly_society_benefits_@</td>
+<td>@_gross_IncomesList-friendly_society_benefits_@</td><td></td></tr>
+
+<tr class="tableRowOdd"><td align="right">private_sickness_scheme</td>
+<td>@_incomesList-private_sickness_scheme_@</td><td>@_gross_IncomesList-private_sickness_scheme_@</td><td></td></tr>
+
+<tr class="tableRowEven"><td align="right">accident_insurance_scheme</td>
+<td>@_incomesList-accident_insurance_scheme_@</td><td>@_gross_IncomesList-accident_insurance_scheme_@</td><td></td></tr>
+
+<tr class="tableRowOdd"><td align="right">hospital_savings_scheme</td>
+<td>@_incomesList-hospital_savings_scheme_@</td><td>@_gross_IncomesList-hospital_savings_scheme_@</td><td></td></tr>
+
+<tr class="tableRowEven"><td align="right">health_insurance</td><td>@_incomesList-health_insurance_@</td>
+<td>@_gross_IncomesList-health_insurance_@</td><td></td></tr>
+
+</table>
+
+         <input type='hidden' name='page' value='incomes_and_passporting' />
+@@INCLUDE@@ submit.inc
+        </form>
+</div>
+@@INCLUDE@@ footer.inc
+</div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+@@INCLUDE@@ header.inc  "Output"
+<body>
+<div class="mainbody">
+<div class="header">
+    <h1>SCOTTISH LEGAL AID MODEL</h1>
+</div>
+
+<div class='menu'>
+ <a href="/slab/intro_page.thtml"> Home </a> &bull; <a href="/slab/actions/?page=income_limits"> Change Parameters </a> &#187;  View Results  &#171; </div>
+
+<form action='/slab/output/'>
+<div class="contents">
+        <form action="/slab/actions/">
+
+<h1>Output</h1>
+<h3>@_run-name_@</h3>
+@@IF@@ @_optimise_@ = 1
+<h2>Optimisation Results</h2>
+<img src="@_url_@" alt="graph of optimising" />
+<p>Error value<strong>@_error_@</strong></p>
+<table>
+<tr class='tableRowEven'>
+        <td>
+        Optimised Lower Limit
+        </td>
+        <td>
+        <strong>
+        @_lower_optimum_@
+        </strong>
+        </td>
+        <td>
+        Optimised Upper Limit
+        </td>
+        <td>
+        <strong>
+        @_upper_optimum_@
+        </strong>
+        </td>
+        <td>
+        Optimum as % of original (100=no change)
+        </td>
+        <td>
+        <strong>
+        @_optimum_val_@
+        </strong>
+        </td>
+</tr>
+<tr class="tableRowOdd" >
+        <td>
+        Disruption Measure:
+        </td>
+        <td>
+        <strong>
+        @_disruption_@
+        </strong>
+        </td>
+        <td>
+        Cost Measure:
+        </td>
+        <td>
+        <strong>
+        @_cost_@
+        </strong>
+        </td>
+        <td>
+        Targetting Measure:
+        </td>
+        <td>
+        <strong>
+        @_targetting_@
+        </strong>
+        </td>
+</tr>
+</table>
+
+@@END_IF@@
+
+<p><a href="/slab/output/?action=profile">Download the run's profile.</a></p>
+<p><a href="/slab/output/?action=param_dump">Download the run's parameters in comma- delimited ascii.</a></p>
+<table>
+        <tr>
+        <td>Cell to compare with</td>
+        <td>@_compare-type_@</td>
+        <td>Cell Operation?</td>
+        <td>@_cell-contents-op_@</td>
+        <td>Cell Contents</td>
+        <td>@_cell-contents_@</td>
+        <td>
+              <input type='submit' name='action' value='redraw' />
+        </td>
+        </tr>
+</table>
+<table>
+        <tr><td></td><td align='center'><b>After</b></td></tr>
+        <tr><td><b>Before</b></td><td>
+<table class='dataTable'>
+        
+        <tr class="tableRowOdd">
+                <th></th>
+                <th>Passported</th>
+                <th>Full Entitled</th>
+                <th>Partially Entitled</th>
+                <th>Not Entitled</th>
+                <th class='tableRowTotals'>totals</th>
+        </tr>
+
+        <tr class="tableRowOdd">
+                <th>Passported</th>
+                <td class='tableRowEven'><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=1&amp;col=1' 
+                    onclick="ExampleWindow( this.href, 'Passported vs Passported', 'no change' ); return false;" onfocus='this.blur()'>@_cell-1-1_@</a></td>
+                    
+                <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=1&amp;col=2' 
+                    onclick="ExampleWindow( this.href, 'Passported vs Fully Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-1-2_@</a></td>
+                    
+               <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=1&amp;col=3' 
+                    onclick="ExampleWindow( this.href, 'Passported vs Partially Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-1-3_@</a></td>
+                    
+               <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=1&amp;col=4' 
+                    onclick="ExampleWindow( this.href, 'Passported vs Not Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-1-4_@</a></td>
+               <td class='tableRowTotals'><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=1&amp;col=-1' 
+                    onclick="ExampleWindow( this.href, 'Passported row totals', 'no change' ); return false;" onfocus='this.blur()'>@_rowtot-1_@</a></td>
+        </tr>
+
+        <tr class="tableRowOdd">
+                <th>Fully Entitled</th>
+
+                <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=2&amp;col=1' 
+                    onclick="ExampleWindow( this.href, 'Passported vs Fully', 'no change' ); return false;" onfocus='this.blur()'>@_cell-2-1_@</a></td>
+                    
+                <td class='tableRowEven'><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=2&amp;col=2' 
+                    onclick="ExampleWindow( this.href, 'Fully Entitled vs Fully Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-2-2_@</a></td>
+                    
+               <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=2&amp;col=3' 
+                    onclick="ExampleWindow( this.href, 'Fully Entitled vs Partially Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-2-3_@</a></td>
+                    
+               <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=2&amp;col=4' 
+                    onclick="ExampleWindow( this.href, 'Fully Entitled vs Not Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-2-4_@</a></td>
+               <td class='tableRowTotals'><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=2&amp;col=-1' 
+                    onclick="ExampleWindow( this.href, 'Fully Entitled row totals', 'no change' ); return false;" onfocus='this.blur()'>@_rowtot-2_@</a></td>
+
+        </tr>
+
+        <tr class="tableRowOdd">
+                <th>Partially Entitled</th>
+
+                <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=3&amp;col=1' 
+                    onclick="ExampleWindow( this.href, 'Partially vs Passported', 'no change' ); return false;" onfocus='this.blur()'>@_cell-3-1_@</a></td>
+                    
+                <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=3&amp;col=2' 
+                    onclick="ExampleWindow( this.href, 'Partially vs Fully Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-3-2_@</a></td>
+                    
+               <td class='tableRowEven'><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=3&amp;col=3' 
+                    onclick="ExampleWindow( this.href, 'Partially vs Partially Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-3-3_@</a></td>
+                    
+               <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=3&amp;col=4' 
+                    onclick="ExampleWindow( this.href, 'Partially vs Not Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-3-4_@</a></td>
+                    
+               <td class='tableRowTotals'><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=3&amp;col=-1' 
+                    onclick="ExampleWindow( this.href, 'Partially row totals', 'no change' ); return false;" onfocus='this.blur()'>@_rowtot-3_@</a></td>
+        </tr>
+        <tr class="tableRowOdd">
+                <th>Not Entitled</th>
+
+                
+                <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=4&amp;col=1' 
+                    onclick="ExampleWindow( this.href, 'Not Entitled vs Passported', 'no change' ); return false;" onfocus='this.blur()'>@_cell-4-1_@</a></td>
+                    
+                <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=4&amp;col=2' 
+                    onclick="ExampleWindow( this.href, 'Not Entitled vs Fully Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-4-2_@</a></td>
+                    
+               <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=4&amp;col=3' 
+                    onclick="ExampleWindow( this.href, 'Not Entitled vs Partially Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-4-3_@</a></td>
+                    
+               <td  class='tableRowEven'><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=4&amp;col=4' 
+                    onclick="ExampleWindow( this.href, 'Not Entitled vs Not Entitled', 'no change' ); return false;" onfocus='this.blur()'>@_cell-4-4_@</a></td>
+               <td class='tableRowTotals'><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=4&amp;col=-1' 
+                    onclick="ExampleWindow( this.href, 'Not Entitledrow totals', 'no change' ); return false;" onfocus='this.blur()'>@_rowtot-4_@</a></td>
+        </tr>
+        <tr class='tableRowTotals'>
+                <th>Totals</th>
+               <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=-1&amp;col=1' 
+                    onclick="ExampleWindow( this.href, 'Passported: Column Totals', 'overall totals' ); return false;" onfocus='this.blur()'>@_coltot-1_@</a></td>
+                <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=-1&amp;col=2' 
+                    onclick="ExampleWindow( this.href, 'Fully Entitled Column Totals', 'overall totals' ); return false;" onfocus='this.blur()'>@_coltot-2_@</a></td>
+                <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=-1&amp;col=3' 
+                    onclick="ExampleWindow( this.href, 'Partially Entitled: Column Totals', 'overall totals' ); return false;" onfocus='this.blur()'>@_coltot-3_@</a></td>
+                <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=-1&amp;col=4' 
+                    onclick="ExampleWindow( this.href, 'Not Entitled: Column Totals', 'overall totals' ); return false;" onfocus='this.blur()'>@_coltot-4_@</a></td>
+                <td><a href='/slab/output/?action=breakdown&amp;cell-type=CURRENT_CELL&amp;row=-1&amp;col=-1' 
+                    onclick="ExampleWindow( this.href, 'Overall Totals', 'overall totals' ); return false;" onfocus='this.blur()'>@_total_@</a></td>
+              
+        </tr>        
+    </table>
+</td>
+</tr>
+</table>
+
+<h2>Parameter Changes</h2>
+
+<table>
+  <tr>
+      <td width='24%'></td>
+
+      <td width='50%'>
+        <table >
+           <tr><th>Variable</th><th>Base Value</th><th>New Value</th></tr>
+             @@TABLE@@
+               <tr class='tableRowOdd'><td><strong>@_TITLE_@</strong> : </td><td>@_PRE-VALUE_@</td><td>@_POST-VALUE_@</td></tr>
+             @@SECTION@@
+               <tr class='tableRowEven'><td><strong>@_TITLE_@</strong></td><td>@_PRE-VALUE_@</td><td>@_POST-VALUE_@</td></tr>
+               
+             @@END_TABLE@@
+          </table>
+      </td>
+      <td width='24%'></td>
+</tr>
+</table>
+</form>
+</div>
+@@INCLUDE@@ footer.inc
+</div>
+</form>
+</body>
+</html>

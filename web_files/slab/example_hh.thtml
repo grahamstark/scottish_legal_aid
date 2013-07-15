@@ -1,0 +1,574 @@
+@@INCLUDE@@ header.inc  "Output Breakdown"
+<body>
+<div class="contents">
+
+<h1>Example Household</h1>
+
+<h2>
+@@IF@@ @_row_@ = 1
+Passported
+@@ELSIF@@ @_row_@ = 2
+Full Entitled
+@@ELSIF@@ @_row_@ = 3
+Partially Entitled
+@@ELSIF@@ @_row_@ = 4
+Disqualified
+@@ELSIF@@ @_row_@ = -1
+ROW TOTALS
+@@END_IF@@
+ :  
+@@IF@@ @_col_@ = 1
+Passported
+@@ELSIF@@ @_col_@ = 2
+Full Entitled
+@@ELSIF@@ @_col_@ = 3
+Partially Entitled
+@@ELSIF@@ @_col_@ = 4
+Disqualified
+@@ELSIF@@ @_col_@ = -1
+COL TOTALS
+@@END_IF@@
+</h2>
+<p><em>@_run-name_@</em></p>
+
+
+<table class='dataTable'>
+<tr class="tableRowEven"><th>Sernum</th><td>@_mhh-sernum_@</td></tr>
+<tr class="tableRowOdd"><th>Interview Date: year</th><td>@_mhh-yearinterview_date_@</td></tr>
+<tr class="tableRowEven"><th>Month</th><td>@_mhh-monthinterview_date_@</td></tr>
+<tr class="tableRowOdd"><th>Grossing Factor</th><td>@_mhh-grossing_factor_@</td></tr>
+<tr class="tableRowEven"><th>Tenure Type</th><td>@_mhh-tenure_@</td></tr>
+<tr class="tableRowOdd"><th>mortgages</th><td>@_mhh-housing_Costs-mortgages_@</td></tr>
+<tr class="tableRowEven"><th>Rates</th><td>@_mhh-housing_Costs-rates_@</td></tr>
+<tr class="tableRowOdd"><th>Water Rates</th><td>@_mhh-housing_Costs-water_rates_@</td></tr>
+<tr class="tableRowEven"><th>Ground Rent</th><td>@_mhh-housing_Costs-ground_rent_@</td></tr>
+<tr class="tableRowOdd"><th>Service Charges</th><td>@_mhh-housing_Costs-service_charges_@</td></tr>
+<tr class="tableRowEven"><th>Repairs And Insurance</th><td>@_mhh-housing_Costs-repairs_and_insurance_@</td></tr>
+<tr class="tableRowOdd"><th>Rent</th><td>@_mhh-housing_Costs-rent_@</td></tr>
+<tr class="tableRowEven"><th>Rent Rebates</th><td>@_mhh-housing_Costs-rent_rebates_@</td></tr>
+<tr class="tableRowOdd"><th>Council Tax Rebates</th><td>@_mhh-housing_Costs-council_tax_rebates_@</td></tr>
+<tr class="tableRowEven"><th>Home Equity</th><td>@_mhh-housing_Costs-home_equity_@</td></tr>
+<tr class="tableRowOdd"><th>House Price</th><td>@_mhh-housing_Costs-house_price_@</td></tr>
+<tr class="tableRowEven"><th>Mortgages Outstanding</th><td>@_mhh-housing_Costs-mortgages_outstanding_@</td></tr>
+
+<tr class="tableRowOdd"><th>Standard Region</th><td>@_mhh-standard-region_@</td></tr>
+<tr class="tableRowEven"><th>Region (Old Version)</th><td>@_mhh-old-region_@</td></tr>
+<tr class="tableRowOdd"><th>Region Stratifier</th><td>@_mhh-regional-stratifier_@</td></tr>
+<tr class="tableRowEven"><th>Household Composition</th><td>@_mhh-composition_@</td></tr>
+<tr class="tableRowOdd"><th>Income Band</th><td>@_mhh-income-band_@</td></tr>
+</table>
+
+@@IF@@ @_num-bus_@ > 0
+<h2>Benefit Unit Number 1</h2>
+<table class='dataTable'>
+<tr class="tableRowEven"><th>Decile</th><td>@_mhh-benefit_units-1-decile_@</td></tr>
+<tr class="tableRowOdd"><th>Economic Status</th><td>@_mhh-benefit_units-1-economic-status_@</td></tr>
+<tr class="tableRowEven"><th>Benefit Unit Type</th><td>@_mhh-benefit_units-1-bu-type_@</td></tr>
+<tr class="tableRowOdd"><th>Last Adult</th><td>@_mhh-benefit_units-1-last-adult_@</td></tr>
+<tr class="tableRowEven"><th>Number of Children</th><td>@_mhh-benefit_units-1-num-children_@</td></tr>
+</table>
+<h3>Head</h3>
+<table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-1-adults-head-age_@</td></tr>
+<tr class="tableRowOdd"><th>Sex</th><td>@_mhh-benefit_units-1-adults-head-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-1-adults-head-marital-status_@</td></tr>
+<tr class="tableRowOdd"><th>Relationship To HoH</th><td>@_mhh-benefit_units-1-adults-head-relToHoH_@</td></tr>
+<tr class="tableRowEven"><th>Lodger</th><td>@_mhh-benefit_units-1-adults-head-is-lodger_@</td></tr>
+<tr class="tableRowOdd"><th>Employment</th><td>@_mhh-benefit_units-1-adults-head-employment_@</td></tr>
+<tr class="tableRowOdd"><th>Employment (ILO)</th><td>@_mhh-benefit_units-1-adults-head-ilo-employment_@</td></tr>
+<tr class="tableRowEven"><th>Has Company Car?</th><td>@_mhh-benefit_units-1-adults-head-has-company-car_@</td></tr>
+<tr class="tableRowOdd"><th>Capital Stock</th><td>@_mhh-benefit_units-1-adults-head-capital-stock_@</td></tr>
+<tr class="tableRowEven"><th>Ethnic Group </th><td>@_mhh-benefit_units-1-adults-head-ethnic-group_@</td></tr>
+</table>
+<h3>Incomes and Expenses</h3>
+<table class='dataTable'>
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_income-titles-1-1_@</th><td>@_income-values-1-1_@</td></tr>
+@@END_TABLE@@
+
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_expenses-titles-1-1_@</th><td>@_expenses-values-1-1_@</td></tr>
+@@END_TABLE@@
+
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_finance-titles-1-1_@</th><td>@_finance-values-1-1_@</td></tr>
+@@END_TABLE@@
+</table>
+
+@@IF@@ @_num-adults-1_@ = 2
+<h3>Spouse</h3>
+<table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-1-adults-spouse-age_@</td></tr>
+<tr class="tableRowOdd"><th>Sex</th><td>@_mhh-benefit_units-1-adults-spouse-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-1-adults-spouse-marital-status_@</td></tr>
+<tr class="tableRowOdd"><th>Relationship To HoH</th><td>@_mhh-benefit_units-1-adults-spouse-relToHoH_@</td></tr>
+<tr class="tableRowEven"><th>isLodger</th><td>@_mhh-benefit_units-1-adults-spouse-is-lodger_@</td></tr>
+<tr class="tableRowOdd"><th>Employment</th><td>@_mhh-benefit_units-1-adults-spouse-employment_@</td></tr>
+<tr class="tableRowOdd"><th>Employment (ILO Def)</th><td>@_mhh-benefit_units-1-adults-spouse-ilo-employment_@</td></tr>
+<tr class="tableRowEven"><th>Has Company Car?</th><td>@_mhh-benefit_units-1-adults-spouse-has-company-car_@</td></tr>
+<tr class="tableRowOdd"><th>Capital Stock</th><td>@_mhh-benefit_units-1-adults-spouse-capital-stock_@</td></tr>
+<tr class="tableRowEven"><th>Ethnic Group </th><td>@_mhh-benefit_units-1-adults-spouse-ethnic-group_@</td></tr>
+</table>
+<h3>Incomes and Expenses</h3>
+<table class='dataTable'>
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_income-titles-1-2_@</th><td>@_income-values-1-2_@</td></tr>
+@@SECTION@@
+<tr class='tableRowEven'><th>@_income-titles-1-2_@</th><td>@_income-values-1-2_@</td></tr>
+@@END_TABLE@@
+
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_expenses-titles-1-2_@</th><td>@_expenses-values-1-2_@</td></tr>
+@@SECTION@@
+<tr class='tableRowEven'><th>@_expenses-titles-1-2_@</th><td>@_expenses-values-1-2_@</td></tr>
+
+@@END_TABLE@@
+
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_finance-titles-1-2_@</th><td>@_finance-values-1-2_@</td></tr>
+@@SECTION@@
+<tr class='tableRowEven'><th>@_finance-titles-1-2_@</th><td>@_finance-values-1-2_@</td></tr>
+@@END_TABLE@@
+</table>
+
+@@END_IF@@
+@@IF@@ @_num-ch-1_@ > 0
+<h4>Child Number 1</h4></h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-1-children-1-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-1-children-1-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-1-children-1-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-1-children-1-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-1_@ > 1
+<h4>Child Number 2</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-1-children-2-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-1-children-2-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-1-children-2-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-1-children-2-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-1_@ > 2
+<h4>Child Number 3</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-1-children-3-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-1-children-3-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-1-children-3-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-1-children-3-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-1_@ > 3
+<h4>Child Number 4</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-1-children-4-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-1-children-4-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-1-children-4-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-1-children-4-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-1_@ > 4
+<h4>Child Number 5</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-1-children-5-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-1-children-5-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-1-children-5-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-1-children-5-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-1_@ > 5
+<h4>Child Number 6</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-1-children-6-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-1-children-6-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-1-children-6-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-1-children-6-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-1_@ > 6
+<h4>Child Number 7</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-1-children-7-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-1-children-7-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-1-children-7-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-1-children-7-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-1_@ > 7
+<h4>Child Number 8</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-1-children-8-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-1-children-8-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-1-children-8-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-1-children-8-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-1_@ > 8
+<h4>Child Number 9</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-1-children-9-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-1-children-9-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-1-children-9-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-1-children-9-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+<h3>Results for Benefit Unit Number 1</h3>
+<table class='resultsTable'>
+<tr><th></th><th>Before</th><th>After</th><th>Difference</th></tr>
+<tr class="tableRowEven"><th>Assessable Capital</th><td>@_assessable_Capital-1-1_@</td><td>@_assessable_Capital-1-2_@</td><td>@_assessable_Capital-1-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Excess Capital</th><td>@_excess_Capital-1-1_@</td><td>@_excess_Capital-1-2_@</td><td>@_excess_Capital-1-diff_@</td></tr>
+<tr class="tableRowEven"><th>Excess Income</th><td>@_excess_Income-1-1_@</td><td>@_excess_Income-1-2_@</td><td>@_excess_Income-1-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Allowances</th><td>@_allowances-1-1_@</td><td>@_allowances-1-2_@</td><td>@_allowances-1-diff_@</td></tr>
+<tr class="tableRowEven"><th>Capital Allowances</th><td>@_capital_Allowances-1-1_@</td><td>@_capital_Allowances-1-2_@</td><td>@_capital_Allowances-1-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Assessable Income</th><td>@_assessable_Income-1-1_@</td><td>@_assessable_Income-1-2_@</td><td>@_assessable_Income-1-diff_@</td></tr>
+<tr class="tableRowEven"><th>Disposable Capital</th><td>@_disposable_Capital-1-1_@</td><td>@_disposable_Capital-1-2_@</td><td>@_disposable_Capital-1-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Disposable Income</th><td>@_disposable_Income-1-1_@</td><td>@_disposable_Income-1-2_@</td><td>@_disposable_Income-1-diff_@</td></tr>
+<tr class="tableRowEven"><th>Gross Income</th><td>@_gross_Income-1-1_@</td><td>@_gross_Income-1-2_@</td><td>@_gross_Income-1-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Benefits In Kind</th><td>@_benefits_In_Kind-1-1_@</td><td>@_benefits_In_Kind-1-2_@</td><td>@_benefits_In_Kind-1-diff_@</td></tr>
+<tr class="tableRowEven"><th>Deductions From Income</th><td>@_deductions_From_Income-1-1_@</td><td>@_deductions_From_Income-1-2_@</td><td>@_deductions_From_Income-1-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Legal Aid State</th><td>@_la_State-1-1_@</td><td>@_la_State-1-2_@</td><td>@_la_State-1-diff_@</td></tr>
+<tr class="tableRowEven"><th>Income Contribution</th><td>@_income_Contribution-1-1_@</td><td>@_income_Contribution-1-2_@</td><td>@_income_Contribution-1-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Capital Contribution</th><td>@_capital_Contribution-1-1_@</td><td>@_capital_Contribution-1-2_@</td><td>@_capital_Contribution-1-diff_@</td></tr>
+<tr class="tableRowEven"><th>Housing Costs</th><td>@_housing_Costs-1-1_@</td><td>@_housing_Costs-1-2_@</td><td>@_housing_Costs-1-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Rent Share Deduction</th><td>@_rent_Share_Deduction-1-1_@</td><td>@_rent_Share_Deduction-1-2_@</td><td>@_rent_Share_Deduction-1-diff_@</td></tr>
+<tr class="tableRowEven"><th>Child Allowances</th><td>@_child_Allowances-1-1_@</td><td>@_child_Allowances-1-2_@</td><td>@_child_Allowances-1-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Partners Allowances</th><td>@_partners_Allowances-1-1_@</td><td>@_partners_Allowances-1-2_@</td><td>@_partners_Allowances-1-diff_@</td></tr>
+<tr class="tableRowEven"><th>Targetting Index</th><td>@_targetting_index-1-1_@</td><td>@_targetting_index-1-2_@</td><td>@_targetting_index-1-diff_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-bus_@ > 1
+<h2>Benefit Unit Number 2</h2>
+<table class='dataTable'>
+<tr class="tableRowEven"><th>Decile</th><td>@_mhh-benefit_units-2-decile_@</td></tr>
+<tr class="tableRowOdd"><th>Economic Status</th><td>@_mhh-benefit_units-2-economic-status_@</td></tr>
+<tr class="tableRowEven"><th>Benefit Unit Type</th><td>@_mhh-benefit_units-2-bu-type_@</td></tr>
+<tr class="tableRowOdd"><th>Last Adult</th><td>@_mhh-benefit_units-2-last-adult_@</td></tr>
+<tr class="tableRowEven"><th>Number of Children</th><td>@_mhh-benefit_units-2-num-children_@</td></tr>
+<tr class="tableRowOdd"><th>Non Dependency Class</th><td>@_mhh-benefit_units-2-non-dependency-class_@</td></tr>
+</table>
+<h3>Head</h3>
+<table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-2-adults-head-age_@</td></tr>
+<tr class="tableRowOdd"><th>Sex</th><td>@_mhh-benefit_units-2-adults-head-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-2-adults-head-marital-status_@</td></tr>
+<tr class="tableRowOdd"><th>Relationship To HoH</th><td>@_mhh-benefit_units-2-adults-head-relToHoH_@</td></tr>
+<tr class="tableRowEven"><th>isLodger</th><td>@_mhh-benefit_units-2-adults-head-is-lodger_@</td></tr>
+<tr class="tableRowOdd"><th>employment</th><td>@_mhh-benefit_units-2-adults-head-employment_@</td></tr>
+<tr class="tableRowOdd"><th>employment</th><td>@_mhh-benefit_units-2-adults-head-ilo-employment_@</td></tr>
+<tr class="tableRowEven"><th>Has Company Car?</th><td>@_mhh-benefit_units-2-adults-head-has-company-car_@</td></tr>
+<tr class="tableRowOdd"><th>Capital Stock</th><td>@_mhh-benefit_units-2-adults-head-capital-stock_@</td></tr>
+<tr class="tableRowEven"><th>Ethnic Group </th><td>@_mhh-benefit_units-2-adults-head-ethnic-group_@</td></tr>
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_income-titles-2-1_@</th><td>@_income-values-2-1_@</td></tr>
+@@END_TABLE@@
+
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_expenses-titles-2-1_@</th><td>@_expenses-values-2-1_@</td></tr>
+@@END_TABLE@@
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_finance-titles-2-1_@</th><td>@_finance-values-2-1_@</td></tr>
+@@END_TABLE@@
+
+</table>
+@@IF@@ @_num-adults-2_@ = 2
+<h3>Spouse</h3>
+<table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-2-adults-spouse-age_@</td></tr>
+<tr class="tableRowOdd"><th>Sex</th><td>@_mhh-benefit_units-2-adults-spouse-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-2-adults-spouse-marital-status_@</td></tr>
+<tr class="tableRowOdd"><th>Relationship To HoH</th><td>@_mhh-benefit_units-2-adults-spouse-relToHoH_@</td></tr>
+<tr class="tableRowEven"><th>isLodger</th><td>@_mhh-benefit_units-2-adults-spouse-is-lodger_@</td></tr>
+<tr class="tableRowOdd"><th>employment</th><td>@_mhh-benefit_units-2-adults-spouse-employment_@</td></tr>
+<tr class="tableRowEven"><th>employment</th><td>@_mhh-benefit_units-2-adults-spouse-ilo-employment_@</td></tr>
+<tr class="tableRowEdd"><th>Has Company Car?</th><td>@_mhh-benefit_units-2-adults-spouse-has-company-car_@</td></tr>
+<tr class="tableRowEven"><th>Capital Stock</th><td>@_mhh-benefit_units-2-adults-spouse-capital-stock_@</td></tr>
+<tr class="tableRowOdd"><th>Ethnic Group </th><td>@_mhh-benefit_units-2-adults-spouse-ethnic-group_@</td></tr>
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_income-titles-2-2_@</th><td>@_income-values-2-2_@</td></tr>
+@@END_TABLE@@
+
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_expenses-titles-2-2_@</th><td>@_expenses-values-2-2_@</td></tr>
+@@END_TABLE@@
+
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_finance-titles-2-2_@</th><td>@_finance-values-2-2_@</td></tr>
+@@END_TABLE@@
+
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-2_@ > 0
+<h4>Child Number 1</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-2-children-1-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-2-children-1-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-2-children-1-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-2-children-1-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-2_@ > 1
+<h4>Child Number 2</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-2-children-2-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-2-children-2-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-2-children-2-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-2-children-2-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-2_@ > 2
+<h4>Child Number 3</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-2-children-3-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-2-children-3-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-2-children-3-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-2-children-3-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-2_@ > 3
+<h4>Child Number 4</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-2-children-4-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-2-children-4-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-2-children-4-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-2-children-4-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-2_@ > 4
+<h4>Child Number 5</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-2-children-5-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-2-children-5-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-2-children-5-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-2-children-5-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-2_@ > 5
+<h4>Child Number 6</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-2-children-6-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-2-children-6-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-2-children-6-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-2-children-6-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-2_@ > 6
+<h4>Child Number 7</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-2-children-7-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-2-children-7-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-2-children-7-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-2-children-7-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-2_@ > 7
+<h4>Child Number 8</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-2-children-8-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-2-children-8-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-2-children-8-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-2-children-8-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-2_@ > 8
+<h4>Child Number 9</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-2-children-9-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-2-children-9-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-2-children-9-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-2-children-9-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+<h3>Results for Benefit Unit Number 2</h3>
+<table class='resultsTable'>
+<tr><th></th><th>Before</th><th>After</th><th>Difference</th></tr>
+<tr class="tableRowEven"><th>Assessable Capital</th><td>@_assessable_Capital-2-1_@</td><td>@_assessable_Capital-2-2_@</td><td>@_assessable_Capital-2-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Excess Capital</th><td>@_excess_Capital-2-1_@</td><td>@_excess_Capital-2-2_@</td><td>@_excess_Capital-2-diff_@</td></tr>
+<tr class="tableRowEven"><th>Excess Income</th><td>@_excess_Income-2-1_@</td><td>@_excess_Income-2-2_@</td><td>@_excess_Income-2-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Allowances</th><td>@_allowances-2-1_@</td><td>@_allowances-2-2_@</td><td>@_allowances-2-diff_@</td></tr>
+<tr class="tableRowEven"><th>Capital Allowances</th><td>@_capital_Allowances-2-1_@</td><td>@_capital_Allowances-2-2_@</td><td>@_capital_Allowances-2-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Assessable Income</th><td>@_assessable_Income-2-1_@</td><td>@_assessable_Income-2-2_@</td><td>@_assessable_Income-2-diff_@</td></tr>
+<tr class="tableRowEven"><th>Disposable Capital</th><td>@_disposable_Capital-2-1_@</td><td>@_disposable_Capital-2-2_@</td><td>@_disposable_Capital-2-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Disposable Income</th><td>@_disposable_Income-2-1_@</td><td>@_disposable_Income-2-2_@</td><td>@_disposable_Income-2-diff_@</td></tr>
+<tr class="tableRowEven"><th>Gross Income</th><td>@_gross_Income-2-1_@</td><td>@_gross_Income-2-2_@</td><td>@_gross_Income-2-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Benefits In Kind</th><td>@_benefits_In_Kind-2-1_@</td><td>@_benefits_In_Kind-2-2_@</td><td>@_benefits_In_Kind-2-diff_@</td></tr>
+<tr class="tableRowEven"><th>Deductions From Income</th><td>@_deductions_From_Income-2-1_@</td><td>@_deductions_From_Income-2-2_@</td><td>@_deductions_From_Income-2-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Legal Aid State</th><td>@_la_State-2-1_@</td><td>@_la_State-2-2_@</td><td>@_la_State-2-diff_@</td></tr>
+<tr class="tableRowEven"><th>Income Contribution</th><td>@_income_Contribution-2-1_@</td><td>@_income_Contribution-2-2_@</td><td>@_income_Contribution-2-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Capital Contribution</th><td>@_capital_Contribution-2-1_@</td><td>@_capital_Contribution-2-2_@</td><td>@_capital_Contribution-2-diff_@</td></tr>
+<tr class="tableRowEven"><th>Housing Costs</th><td>@_housing_Costs-2-1_@</td><td>@_housing_Costs-2-2_@</td><td>@_housing_Costs-2-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Rent Share Deduction</th><td>@_rent_Share_Deduction-2-1_@</td><td>@_rent_Share_Deduction-2-2_@</td><td>@_rent_Share_Deduction-2-diff_@</td></tr>
+<tr class="tableRowEven"><th>Child Allowances</th><td>@_child_Allowances-2-1_@</td><td>@_child_Allowances-2-2_@</td><td>@_child_Allowances-2-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Partners Allowances</th><td>@_partners_Allowances-2-1_@</td><td>@_partners_Allowances-2-2_@</td><td>@_partners_Allowances-2-diff_@</td></tr>
+<tr class="tableRowEven"><th>Targetting Index</th><td>@_targetting_index-2-1_@</td><td>@_targetting_index-2-2_@</td><td>@_targetting_index-2-diff_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-bus_@ > 2
+<h2>Benefit Unit Number 3</h2>
+<table class='dataTable'>
+<tr class="tableRowEven"><th>Decile</th><td>@_mhh-benefit_units-3-decile_@</td></tr>
+<tr class="tableRowOdd"><th>Economic Status</th><td>@_mhh-benefit_units-3-economic-status_@</td></tr>
+<tr class="tableRowEven"><th>Benefit Unit Type</th><td>@_mhh-benefit_units-3-bu-type_@</td></tr>
+<tr class="tableRowOdd"><th>Last Adult</th><td>@_mhh-benefit_units-3-last-adult_@</td></tr>
+<tr class="tableRowEven"><th>Number of Children</th><td>@_mhh-benefit_units-3-num-children_@</td></tr>
+<tr class="tableRowOdd"><th>Non Dependency Class</th><td>@_mhh-benefit_units-3-non-dependency-class_@</td></tr>
+</table>
+<h3>Head</h3>
+<table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-3-adults-head-age_@</td></tr>
+<tr class="tableRowOdd"><th>Sex</th><td>@_mhh-benefit_units-3-adults-head-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-3-adults-head-marital-status_@</td></tr>
+<tr class="tableRowOdd"><th>Relationship To HoH</th><td>@_mhh-benefit_units-3-adults-head-relToHoH_@</td></tr>
+<tr class="tableRowEven"><th>isLodger</th><td>@_mhh-benefit_units-3-adults-head-is-lodger_@</td></tr>
+<tr class="tableRowOdd"><th>employment</th><td>@_mhh-benefit_units-3-adults-head-employment_@</td></tr>
+<tr class="tableRowEven"><th>Has Company Car?</th><td>@_mhh-benefit_units-3-adults-head-has-company-car_@</td></tr>
+<tr class="tableRowOdd"><th>Capital Stock</th><td>@_mhh-benefit_units-3-adults-head-capital-stock_@</td></tr>
+<tr class="tableRowEven"><th>Ethnic Group </th><td>@_mhh-benefit_units-3-adults-head-ethnic-group_@</td></tr>
+
+</table>
+<h3>Incomes and Expenses</h3>
+<table class='dataTable'>
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_income-titles-3-1_@</th><td>@_income-values-3-1_@</td></tr>
+@@END_TABLE@@
+
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_expenses-titles-3-1_@</th><td>@_expenses-values-3-1_@</td></tr>
+@@END_TABLE@@
+
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_finance-titles-3-1_@</th><td>@_finance-values-3-1_@</td></tr>
+@@END_TABLE@@
+
+</table>
+
+@@IF@@ @_num-adults-3_@ = 2
+<h3>Spouse</h3>
+<table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-3-adults-spouse-age_@</td></tr>
+<tr class="tableRowOdd"><th>Sex</th><td>@_mhh-benefit_units-3-adults-spouse-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-3-adults-spouse-marital-status_@</td></tr>
+<tr class="tableRowOdd"><th>Relationship To HoH</th><td>@_mhh-benefit_units-3-adults-spouse-relToHoH_@</td></tr>
+<tr class="tableRowEven"><th>isLodger</th><td>@_mhh-benefit_units-3-adults-spouse-is-lodger_@</td></tr>
+<tr class="tableRowOdd"><th>employment</th><td>@_mhh-benefit_units-3-adults-spouse-employment_@</td></tr>
+<tr class="tableRowEven"><th>Has Company Car?</th><td>@_mhh-benefit_units-3-adults-spouse-has-company-car_@</td></tr>
+<tr class="tableRowOdd"><th>Capital Stock</th><td>@_mhh-benefit_units-3-adults-spouse-capital-stock_@</td></tr>
+<tr class="tableRowEven"><th>Ethnic Group </th><td>@_mhh-benefit_units-3-adults-spouse-ethnic-group_@</td></tr>
+</table>
+<h3>Incomes and Expenses</h3>
+<table class='dataTable'>
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_income-titles-3-2_@</th><td>@_income-values-3-2_@</td></tr>
+@@END_TABLE@@
+
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_expenses-titles-3-2_@</th><td>@_expenses-values-3-2_@</td></tr>
+@@END_TABLE@@
+
+
+@@TABLE@@
+<tr class='tableRowOdd'><th>@_finance-titles-3-2_@</th><td>@_finance-values-3-2_@</td></tr>
+@@END_TABLE@@
+
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-3_@ > 0
+<h4>Child Number 1</h4>
+<table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-3-children-1-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-3-children-1-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-3-children-1-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-3-children-1-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-3_@ > 1
+<h4>Child Number 2</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-3-children-2-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-3-children-2-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-3-children-2-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-3-children-2-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-3_@ > 2
+<h4>Child Number 3</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-3-children-3-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-3-children-3-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-3-children-3-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-3-children-3-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-3_@ > 3
+<h4>Child Number 4</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-3-children-4-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-3-children-4-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-3-children-4-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-3-children-4-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-3_@ > 4
+<h4>Child Number 5</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-3-children-5-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-3-children-5-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-3-children-5-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-3-children-5-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-3_@ > 5
+<h4>Child Number 6</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-3-children-6-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-3-children-6-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-3-children-6-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-3-children-6-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-3_@ > 6
+<h4>Child Number 7</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-3-children-7-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-3-children-7-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-3-children-7-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-3-children-7-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-3_@ > 7
+<h4>Child Number 8</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-3-children-8-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-3-children-8-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-3-children-8-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-3-children-8-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+@@IF@@ @_num-ch-3_@ > 8
+<h4>Child Number 9</h4><table class='dataTable'>
+<tr class="tableRowEven"><th>Age</th><td>@_mhh-benefit_units-3-children-9-age_@</td></tr>
+<tr class="tableRowEven"><th>Sex</th><td>@_mhh-benefit_units-3-children-9-sex_@</td></tr>
+<tr class="tableRowEven"><th>Marital Status</th><td>@_mhh-benefit_units-3-children-9-marital-status_@</td></tr>
+<tr class="tableRowEven"><th>Relationship To HoH</th><td>@_mhh-benefit_units-3-children-9-relToHoH_@</td></tr>
+</table>
+@@END_IF@@
+<h3>Results for Benefit Unit Number 3</h3>
+<table class='resultsTable'>
+<tr><th></th><th>Before</th><th>After</th><th>Difference</th></tr>
+<tr class="tableRowEven"><th>Assessable Capital</th><td>@_assessable_Capital-3-1_@</td><td>@_assessable_Capital-3-2_@</td><td>@_assessable_Capital-3-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Excess Capital</th><td>@_excess_Capital-3-1_@</td><td>@_excess_Capital-3-2_@</td><td>@_excess_Capital-3-diff_@</td></tr>
+<tr class="tableRowEven"><th>Excess Income</th><td>@_excess_Income-3-1_@</td><td>@_excess_Income-3-2_@</td><td>@_excess_Income-3-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Allowances</th><td>@_allowances-3-1_@</td><td>@_allowances-3-2_@</td><td>@_allowances-3-diff_@</td></tr>
+<tr class="tableRowEven"><th>Capital Allowances</th><td>@_capital_Allowances-3-1_@</td><td>@_capital_Allowances-3-2_@</td><td>@_capital_Allowances-3-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Assessable Income</th><td>@_assessable_Income-3-1_@</td><td>@_assessable_Income-3-2_@</td><td>@_assessable_Income-3-diff_@</td></tr>
+<tr class="tableRowEven"><th>Disposable Capital</th><td>@_disposable_Capital-3-1_@</td><td>@_disposable_Capital-3-2_@</td><td>@_disposable_Capital-3-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Disposable Income</th><td>@_disposable_Income-3-1_@</td><td>@_disposable_Income-3-2_@</td><td>@_disposable_Income-3-diff_@</td></tr>
+<tr class="tableRowEven"><th>Gross Income</th><td>@_gross_Income-3-1_@</td><td>@_gross_Income-3-2_@</td><td>@_gross_Income-3-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Benefits In Kind</th><td>@_benefits_In_Kind-3-1_@</td><td>@_benefits_In_Kind-3-2_@</td><td>@_benefits_In_Kind-3-diff_@</td></tr>
+<tr class="tableRowEven"><th>Deductions From Income</th><td>@_deductions_From_Income-3-1_@</td><td>@_deductions_From_Income-3-2_@</td><td>@_deductions_From_Income-3-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Legal Aid State</th><td>@_la_State-3-1_@</td><td>@_la_State-3-2_@</td><td>@_la_State-3-diff_@</td></tr>
+<tr class="tableRowEven"><th>Income Contribution</th><td>@_income_Contribution-3-1_@</td><td>@_income_Contribution-3-2_@</td><td>@_income_Contribution-3-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Capital Contribution</th><td>@_capital_Contribution-3-1_@</td><td>@_capital_Contribution-3-2_@</td><td>@_capital_Contribution-3-diff_@</td></tr>
+<tr class="tableRowEven"><th>Housing Costs</th><td>@_housing_Costs-3-1_@</td><td>@_housing_Costs-3-2_@</td><td>@_housing_Costs-3-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Rent Share Deduction</th><td>@_rent_Share_Deduction-3-1_@</td><td>@_rent_Share_Deduction-3-2_@</td><td>@_rent_Share_Deduction-3-diff_@</td></tr>
+<tr class="tableRowEven"><th>Child Allowances</th><td>@_child_Allowances-3-1_@</td><td>@_child_Allowances-3-2_@</td><td>@_child_Allowances-3-diff_@</td></tr>
+<tr class="tableRowOdd"><th>Partners Allowances</th><td>@_partners_Allowances-3-1_@</td><td>@_partners_Allowances-3-2_@</td><td>@_partners_Allowances-3-diff_@</td></tr>
+<tr class="tableRowEven"><th>Targetting Index</th><td>@_targetting_index-3-1_@</td><td>@_targetting_index-3-2_@</td><td>@_targetting_index-3-diff_@</td></tr>
+</table>
+@@END_IF@@
+
+</div>
+@@INCLUDE@@ footer.inc
+
+</body>
+</html>

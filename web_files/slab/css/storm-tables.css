@@ -1,0 +1,80 @@
+table{
+	 border-collapse: collapse;
+     width: 98%;
+     padding:0;
+     border: 0;
+	 font-family: "Bell Centenial", "Gill Sans", arial, helvetica, sans-serif;
+     }
+  
+.dataTable, 
+.numberTable,
+.resultsTable{ font-size: 10pt }
+
+.dataTable td, .dataTable th { text-align: right; }
+.resultsTable th, .resultsTable td  { text-align: right; }
+
+     
+.menupipe {color: #000000; font-size: 10px;  text-decoration: none; font-weight: normal;}
+
+.menu {color: #000000; font-size: 11px; text-decoration: none; font-weight: bold;}
+
+td.cellHighlight {
+  font-weight: bold;
+  /* background-color:  #142424; */
+}
+
+tr.tableRowHeader {
+
+  font-weight: bold;
+  background-color:  #142424; 
+}
+
+
+
+
+td.tableCell_header {
+  font-family:  "Gill Sans", verdana, tahoma, arial, helvetica;
+  
+  color: white;
+  background-color:  #142424; ;
+}
+
+tr.tableRowOdd {
+ 
+  background-color: #213131;  
+ 
+}
+tr.tableRowEven {
+ 
+  background-color: #123d46; 
+}
+td.tableCell {
+  
+}
+
+.boldstyle {
+    font-weight: bold;   
+}
+
+
+td a:hover{	
+    border: none;
+    /*border: 1px solid #d5d0c4;*/
+    background: #77aaaa;
+    display:block;
+    /*text-decoration: bold;*/   
+}
+
+.sumCell{
+    font-size:110%;
+    font-weight: bold;
+}
+
+.up{
+        color : green;               
+}
+
+.down{
+        color : red;               
+}
+

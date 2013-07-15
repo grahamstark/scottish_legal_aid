@@ -1,0 +1,78 @@
+@@INCLUDE@@ header.inc  "Income and Capital Limits"
+<body>
+<div class="mainbody">
+<div class="header">
+    <h1>SCOTTISH LEGAL AID MODEL</h1>
+</div>
+
+<div class='menu'>
+<a href="/slab/intro_page.thtml"> Home </a> &#187; Change Parameters &#171;  <a href="/slab/output/?action=display&amp;compare=totals"> View Results</a></div>
+<div class='submenu'>
+ &#187;Income and Capital Limits  &#171; &bull; <a href="/slab/actions/?page=capital_disregards">Capital Disregards</a>  &bull; 
+<a href="/slab/actions/?page=incomes_and_passporting"> Incomes and Passporting</a>  &bull; <a href="/slab/actions/?page=allowable_expenses">Allowable Expenses</a> &bull; 
+<a href="/slab/actions/?page=housing">Housing Costs</a>  &bull;
+<a href="/slab/actions/?page=contributions">Contributions</a>
+
+</div>
+
+
+
+<div class="contents">
+        <form action="/slab/actions/">
+        <input type='hidden' name='frm_incomes' value='frm_incomes' />
+
+<h3>Income and Capital Limits</h3>
+<p><em>@_run-name_@</em></p>
+<table>        
+        <tr class="tableRowEven">
+                <td align="right">Lower Income Limit</td><td>@_lower_limit-income-ctype_@</td>
+                <td align="right">Upper Income Limit</td><td>@_upper_limit-income-ctype_@</td>
+        </tr>
+        <tr class="tableRowOdd">
+        
+                <td align="right">Lower Capital Limit</td><td>@_lower_limit-capital-ctype_@</td>
+                <td align="right">Upper Capital Limit</td><td>@_upper_limit-capital-ctype_@</td>
+        </tr>
+        <tr class="tableRowEven">
+                <td align='right'>Gross Income Lower Limit (fully entitled below this)</td><td>@_gross_Income_lower_limit_@</td>
+                <td align="right">Gross Income Limit (disqualified above this)</td><td>@_gross_IncomeLimit_@</td>
+        </tr>
+        <tr class="tableRowOdd">
+                <td align='right'>Use Equivalised gross income?</td><td>@_equivalise-incomes_@</td>
+        </tr>
+        
+</table>
+<h3>Allowances</h3>
+
+<table>
+<tr><th></th><th>Age Limit</th><th></th><th>Amount</th>
+<tr class="tableRowOdd"><td align="right">First Child Age Limit </td><td>@_allow-income-child_age_limit-1_@</td>
+<td align="right"></td><td>@_allow-income-child_allowance-1_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">2nd Child Age Limit </td><td>@_allow-income-child_age_limit-2_@</td>
+<td align="right"></td><td>@_allow-income-child_allowance-2_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Top Child Age Limit </td><td>@_allow-income-child_age_limit-3_@</td>
+<td align="right"></td><td>@_allow-income-child_allowance-3_@</td></tr>
+</table>
+
+<table>
+<tr class="tableRowEven"><td align="right">Living Allowance (Criminal Cases)</td><td>@_allow-income-living-allowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Partner's Allowance</td><td>@_allow-income-partners_allowance_@</td></tr>
+<tr class="tableRowEven"><td align="right">Other Dependent's allowance</td><td>@_allow-income-other_dependants_allowance_@</td></tr>
+</table>
+
+<table>
+<tr class="tableRowOdd"><td align="right">Housing Equity Counts as Capital?</td><td>@_housing-equity-is-capital_@</td>
+    <td align="right">Housing Equity Disregard</td><td>@_housing-equity-disregard_@</td></tr>
+</table>
+
+@@INCLUDE@@ submit.inc
+<input type='hidden' name='page' value='income_limits' />
+        </form>
+</div>
+
+@@INCLUDE@@ footer.inc
+</div>
+</body>
+</html>

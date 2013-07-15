@@ -1,0 +1,83 @@
+@@INCLUDE@@ header.inc  "Income and Capital Limits"
+<body>
+<div class="mainbody">
+<div class="header">
+    <h1>SCOTTISH LEGAL AID MODEL</h1>
+</div>
+
+<div class='menu'>
+ <a href="/slab/intro_page.thtml"> Home </a>  &#187; Change Parameters &#171;  <a href="/slab/output/?action=display&amp;compare=totals"> View Results</a></div>
+<div class='submenu'>
+<a href="/slab/actions/?page=income_limits"> Income and Capital Limits</a> &bull; &#187; Capital Disregards &#171;  &bull; 
+<a href="/slab/actions/?page=incomes_and_passporting"> Incomes and Passporting</a>  &bull; <a href="/slab/actions/?page=allowable_expenses">Allowable Expenses</a> &bull; 
+<a href="/slab/actions/?page=housing">Housing Costs</a>  &bull;
+<a href="/slab/actions/?page=contributions">Contributions</a>
+
+</div>
+
+
+<div class="contents">
+        <form action="/slab/actions/">
+        <input type='hidden' name='frm_capital' value='frm_capital' />
+
+<h3>Capital and Income Disregards </h3>
+<p><em>@_run-name_@</em></p>
+
+
+@@IF@@ @_capital-allowance-type-flag_@ = 2 
+<table>
+<tr class="tableRowOdd"><td align="right">Pensioner Age Limit (Males)</td><td>@_pensioner_age_limit-male_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Age Limit (Females)</td><td>@_pensioner_age_limit-female_@</td></tr>
+</table>
+
+<table>
+<tr class="tableRowOdd"><td align="right">Pensioner Capital Disregard [1]</td><td>@_capital_disregard-pensioner-disregard1_@</td>
+<td align="right">Pensioner Income Limit [1]</td><td>@_capital_disregard-pensioner-incomeLimit1_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Pensioner Capital Disregard [2]</td><td>@_capital_disregard-pensioner-disregard2_@</td>
+<td align="right">Pensioner Income Limit [2]</td><td>@_capital_disregard-pensioner-incomeLimit2_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Pensioner Capital Disregard [3]</td><td>@_capital_disregard-pensioner-disregard3_@</td>
+<td align="right">Pensioner Income Limit [3]</td><td>@_capital_disregard-pensioner-incomeLimit3_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Pensioner Capital Disregard [4]</td><td>@_capital_disregard-pensioner-disregard4_@</td>
+<td align="right">Pensioner Income Limit [4]</td><td>@_capital_disregard-pensioner-incomeLimit4_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Pensioner Capital Disregard [5]</td><td>@_capital_disregard-pensioner-disregard5_@</td>
+<td align="right">Pensioner Income Limit [5]</td><td>@_capital_disregard-pensioner-incomeLimit5_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Pensioner Capital Disregard [6]</td><td>@_capital_disregard-pensioner-disregard6_@</td>
+<td align="right">Pensioner Income Limit [6]</td><td>@_capital_disregard-pensioner-incomeLimit6_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Pensioner Capital Disregard [7]</td><td>@_capital_disregard-pensioner-disregard7_@</td>
+<td align="right">Pensioner Income Limit [7]</td><td>@_capital_disregard-pensioner-incomeLimit7_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Pensioner Capital Disregard [8]</td><td>@_capital_disregard-pensioner-disregard8_@</td>
+<td align="right">Pensioner Income Limit [8]</td><td>@_capital_disregard-pensioner-incomeLimit8_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Pensioner Capital Disregard [9]</td><td>@_capital_disregard-pensioner-disregard9_@</td>
+<td align="right">Pensioner Income Limit [9]</td><td>@_capital_disregard-pensioner-incomeLimit9_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Pensioner Capital Disregard [10]</td><td>@_capital_disregard-pensioner-disregard10_@</td>
+<td align="right">Pensioner Income Limit [10]</td><td>@_capital_disregard-pensioner-incomeLimit10_@</td></tr>
+</table>
+@@ELSE@@
+<table>
+<tr class="tableRowEven"><td align="right">Dependents allowance: 1st dependent</td><td>@_allow-capital-dependent_allowances1_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Dependents allowance: 2nd dependent</td><td>@_allow-capital-dependent_allowances2_@</td></tr>
+<tr class="tableRowEven"><td align="right">Dependents allowance: 3rd dependent</td><td>@_allow-capital-dependent_allowances3_@</td></tr>
+<tr class="tableRowEven"><td align="right">Dependents allowance: subsequent dependents</td><td>@_allow-capital-dependent_allowances4_@</td></tr>
+</table>
+@@END_IF@@
+
+
+
+
+         <input type='hidden' name='page' value='capital_disregards' />
+@@INCLUDE@@ submit.inc
+        </form>
+</div>
+@@INCLUDE@@ footer.inc
+</div>
+</body>
+</html>

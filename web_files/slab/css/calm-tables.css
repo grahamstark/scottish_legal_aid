@@ -1,0 +1,106 @@
+table{
+     border: 1px black;
+     width: 98%;
+     /*width: 520px;*/
+	 border-collapse: collapse;  
+	 font-family: "Gill Sans", arial, helvetica, sans-serif;
+     font-size: 12px;      
+}
+
+
+.dataTable, 
+.numberTable,
+.resultsTable{ font-size: 10pt }
+
+.dataTable td, resultsTable td { text-align: right; }
+.dataTable th, resultsTable td  { text-align: left; }
+
+.tableRowHeader {
+  text-align: right;
+  background-color: 
+  font-weight: bold;
+  background: #DCB;
+}
+
+.cellHighlight {
+  font-weight: bold;
+  /*background-color: white;*/
+}
+
+.tableCell_header {
+ 
+  color: black;
+  background-color: #777777;
+}
+
+.sumCell{
+    font-size:110%;
+    font-weight: bold;
+}
+
+.tableRowOdd {
+ 
+  background-color: #FFFBDF;
+ 
+}
+
+
+
+.dataTable td a:link a:visited{
+       border: none;
+       text-decoration: none;        
+       color: black; 
+       text-align: right;
+}
+
+.dataTable td a:hover{
+       border: none;
+       text-decoration: none;        
+       color: black; 
+       background-color: #DCB;
+       display:block;   
+}
+
+
+.imageCell a:link{
+	border: none;
+        text-decoration: none;
+	}
+
+
+.tableRowEven {
+ 
+  background-color: #E5E0D4;
+}
+
+.tableRowTotals {
+  background-color: #d5d0c4;
+  font-weight: bold;
+}
+
+td a:hover{	
+    border: none;
+    /*border: 1px solid #d5d0c4;*/
+    background: #DBA;
+    display:block;
+    /*text-decoration: bold;*/
+    
+}
+
+.up{
+        color : green;               
+}
+
+.down{
+        color : red;               
+}
+
+.normal{ color: black; }
+
+.resultsTable tr.tableRowEven{
+       background:  #7cbdbf;      
+}
+
+.resultsTable tr.tableRowOdd{
+       background:  #a7f1f4;      
+}

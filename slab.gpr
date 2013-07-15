@@ -1,0 +1,55 @@
+with "aws";
+with "aunit";
+
+project Slab is
+
+   for Languages use ("Ada", "Project file");
+   for Source_Dirs use ("src//**", "tests//**", "utils//**", "web_src//**", "/opt/gnat2006/include//**");
+   for Object_Dir use "bin";
+   for Exec_Dir use "bin";
+   for Main use (
+                "sla_server.adb",
+                "harness.adb",
+                "write_frs_datasets.adb",
+                "write_model_datasets.adb",
+                "generate_la_statistics.adb",
+                "quick_la_tests.adb",
+                "optimal_rate_driver.adb", 
+                "optimal_rate_driver_hacked_for_jo.adb",
+                "optimal_rate_driver2.adb"
+   );
+   -- "harness.adb",
+
+   package Naming is
+      for Specification_Suffix ("project file") use ".gpr";
+      for Specification_Suffix ("changelog") use "changelog";
+      for Specification_Suffix ("python") use ".py";
+   end Naming;
+
+   package Pretty_Printer is
+      for Default_Switches ("ada") use ("-M140", "-l3");
+   end Pretty_Printer;
+
+   package Builder is
+      for Default_Switches ("ada") use ("-s", "-m");
+      for Executable ("harness.adb") use "";
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnatf", "-gnato", "-fstack-check", "-gnatE", "-g", "-gnata", "-gnatwc", "-gnatwd", "-gnatwf", 
+                                        "-gnatwh", "-gnatwi", "-gnatwj", "-gnatwk", "-gnatwl", "-gnatwm", "-gnatwo", "-gnatwp", "-gnatwr",
+                                        "-gnatwu", "-gnatwv", "-gnatwz", "-gnatVc", "-gnatVd", "-gnatVf", "-gnatVi", "-gnatVm", "-gnatVo", 
+                                        "-gnatVr", "-gnatVs", "-gnatVt", "-gnatya", "-gnatyM160", "-gnatD");
+   end Compiler;
+
+   package Binder is
+      for Default_Switches ("ada") use ("-E", "-r");
+   end Binder;
+
+   package Linker is
+      for Default_Switches ("ada") use ("-g", "-ftest-coverage" , "-lcrypto", "-lssl" );
+   end Linker;
+   --  , "-lcrypto", "-lssl"
+
+end Slab;
+

@@ -1,0 +1,112 @@
+@@INCLUDE@@ header.inc  "Contributions"
+<body>
+<div class="mainbody">
+<div class="header">
+    <h1>SCOTTISH LEGAL AID MODEL</h1>
+</div>
+
+<div class='menu'>
+ <a href="/slab/intro_page.thtml"> Home </a> &#187; Change Parameters &#171;  <a href="/slab/output/?action=display&amp;compare=totals"> View Results</a></div>
+<div class='submenu'>
+<a href="/slab/actions/?page=income_limits"> Income and Capital Limits</a> &bull;<a href="/slab/actions/?page=capital_disregards">Capital Disregards </a>  &bull; 
+<a href="/slab/actions/?page=incomes_and_passporting"> Incomes and Passporting</a> &bull; <a href="/slab/actions/?page=allowable_expenses"> Allowable Expenses</a>
+<a href="/slab/actions/?page=housing">Housing Costs</a>
+
+&bull; &#187;Contributions &#171; 
+
+
+
+</div>
+
+
+
+<div class="contents">
+        <form action="/slab/actions/">
+        <input type='hidden' name='frm_contributions' value='frm_contributions' />
+
+<h3>Contributions</h3>
+<p><em>@_run-name_@</em></p>
+
+<p>
+bla
+</p>
+
+<h2>Incomes</h2>
+
+<table>
+
+<tr class="tableRowOdd"><td align="right" >Contribution Proportion [1]</td><td>@_contributionsincome-contribution_proportion1_@</td>
+        <td align="right" >Contribution Band [1]</td><td>@_contributionsincome-contribution_band1_@</td></tr>
+        
+<tr class="tableRowEven"><td align="right" >Contribution Proportion [2]</td><td>@_contributionsincome-contribution_proportion2_@</td>
+        <td align="right" >Contribution Band [2]</td><td>@_contributionsincome-contribution_band2_@</td></tr>
+        
+<tr class="tableRowOdd"><td align="right" >Contribution Proportion [3]</td><td>@_contributionsincome-contribution_proportion3_@</td>
+        <td align="right" >Contribution Band [3]</td><td>@_contributionsincome-contribution_band3_@</td></tr>
+        
+<tr class="tableRowEven"><td align="right" >Contribution Proportion [4]</td><td>@_contributionsincome-contribution_proportion4_@</td>
+        <td align="right" >Contribution Band [4]</td><td>@_contributionsincome-contribution_band4_@</td></tr>
+        
+<tr class="tableRowOdd"><td align="right" >Contribution Proportion [5]</td><td>@_contributionsincome-contribution_proportion5_@</td>
+<td align="right" >Contribution Band [5]</td><td>@_contributionsincome-contribution_band5_@</td></tr>
+
+<tr class="tableRowEven"><td align="right" >Contribution Proportion [6]</td><td>@_contributionsincome-contribution_proportion6_@</td>
+<td align="right" >Contribution Band [6]</td><td>@_contributionsincome-contribution_band6_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right" >Contribution Proportion [7]</td><td>@_contributionsincome-contribution_proportion7_@</td>
+<td align="right" >Contribution Band [7]</td><td>@_contributionsincome-contribution_band7_@</td></tr>
+
+<tr class="tableRowEven"><td align="right" >Contribution Proportion [8]</td><td>@_contributionsincome-contribution_proportion8_@</td>
+<td align="right" >Contribution Band [8]</td><td>@_contributionsincome-contribution_band8_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right" >Contribution Proportion [9]</td><td>@_contributionsincome-contribution_proportion9_@</td>
+<td align="right" >Contribution Band [9]</td><td>@_contributionsincome-contribution_band9_@</td></tr>
+
+<tr class="tableRowEven"><td align="right" >Contribution Proportion [10]</td><td>@_contributionsincome-contribution_proportion10_@</td>
+<td align="right" >Contribution Band [10]</td><td>@_contributionsincome-contribution_band10_@</td></tr>
+
+</table>
+<h2>Capital</h2>
+<table>
+
+<tr class="tableRowOdd"><td align="right" >Contribution Proportion [1]</td><td>@_contributionscapital-contribution_proportion1_@</td>
+<td align="right" >Contribution Band [1]</td><td>@_contributionscapital-contribution_band1_@</td></tr>
+
+<tr class="tableRowEven"><td align="right" >Contribution Proportion [2]</td><td>@_contributionscapital-contribution_proportion2_@</td>
+<td align="right" >Contribution Band [2]</td><td>@_contributionscapital-contribution_band2_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right" >Contribution Proportion [3]</td><td>@_contributionscapital-contribution_proportion3_@</td>
+<td align="right" >Contribution Band [3]</td><td>@_contributionscapital-contribution_band3_@</td></tr>
+
+<tr class="tableRowEven"><td align="right" >Contribution Proportion [4]</td><td>@_contributionscapital-contribution_proportion4_@</td>
+<td align="right" >Contribution Band [4]</td><td>@_contributionscapital-contribution_band4_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right" >Contribution Proportion [5]</td><td>@_contributionscapital-contribution_proportion5_@</td>
+<td align="right" >Contribution Band [5]</td><td>@_contributionscapital-contribution_band5_@</td></tr>
+
+<tr class="tableRowEven"><td align="right" >Contribution Proportion [6]</td><td>@_contributionscapital-contribution_proportion6_@</td>
+<td align="right" >Contribution Band [6]</td><td>@_contributionscapital-contribution_band6_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right" >Contribution Proportion [7]</td><td>@_contributionscapital-contribution_proportion7_@</td>
+<td align="right" >Contribution Band [7]</td><td>@_contributionscapital-contribution_band7_@</td></tr>
+
+<tr class="tableRowEven"><td align="right" >Contribution Proportion [8]</td><td>@_contributionscapital-contribution_proportion8_@</td>
+<td align="right" >Contribution Band [8]</td><td>@_contributionscapital-contribution_band8_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right" >Contribution Proportion [9]</td><td>@_contributionscapital-contribution_proportion9_@</td>
+<td align="right" >Contribution Band [9]</td><td>@_contributionscapital-contribution_band9_@</td></tr>
+
+<tr class="tableRowEven"><td align="right" >Contribution Proportion [10]</td><td>@_contributionscapital-contribution_proportion10_@</td>
+<td align="right" >Contribution Band [10]</td><td>@_contributionscapital-contribution_band10_@</td></tr>
+
+</table>
+
+
+         <input type='hidden' name='page' value='contributions' />
+@@INCLUDE@@ submit.inc
+        </form>
+</div>
+@@INCLUDE@@ footer.inc
+</div>
+</body>
+</html>

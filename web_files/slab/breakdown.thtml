@@ -1,0 +1,176 @@
+@@INCLUDE@@ header.inc  "Output Breakdown"
+<body>
+<div class="contents">
+
+<h1>Table Composition Summaries</h1>
+
+<h2>
+@@IF@@ @_row_@ = 1
+Passported
+@@ELSIF@@ @_row_@ = 2
+Full Entitled
+@@ELSIF@@ @_row_@ = 3
+Partially Entitled
+@@ELSIF@@ @_row_@ = 4
+Disqualified
+@@ELSIF@@ @_row_@ = -1
+ROW TOTALS
+@@END_IF@@
+ :
+@@IF@@ @_col_@ = 1
+Passported
+@@ELSIF@@ @_col_@ = 2
+Full Entitled
+@@ELSIF@@ @_col_@ = 3
+Partially Entitled
+@@ELSIF@@ @_col_@ = 4
+Disqualified
+@@ELSIF@@ @_col_@ = -1
+COL TOTALS
+@@END_IF@@
+</h2>
+<p><em>@_run-name_@</em></p>
+
+<form action='/slab/output/'>
+
+@@IF@@ @_has-examples_@ = 1
+
+<h3>Examples</h3>
+<table class='dataTable' width='60%'>
+  <tr>
+   @@TABLE@@
+        <td align='center'>
+        <a onclick="HouseholdWindow( this.href, 'Example Household', 'example' ); return false;" onfocus='this.blur()' href='/slab/output/?action=example&amp;hhref=@_HH-REF_@&amp;year=@_DYEAR_@&amp;row=@_col_@&amp;col=@_col_@'> @_EXAMPLE-NUM_@ </a>
+        </td>
+   @@END_TABLE@@
+  </tr>
+</table>
+
+@@END_IF@@
+
+
+<input type='hidden' value='breakdown' name='action'/>
+<input type='hidden' name='row' value='@_row_@'/>
+<input type='hidden' name='col' value='@_col_@'/>
+<table class='dataTable'>
+        <tr>
+                <td>
+                       compare cells with: @_compare-type_@
+                </td>
+                <td>
+                        <input type='submit' name='action' value='redraw' />
+                </td>
+        </tr>
+</table>
+<table border='2'>
+        <tr>
+                <td valign='top'>
+                        <h3>Marital Status of Head (MARITAL)</h3>
+                        <table  class='dataTable'>
+                                @@TABLE@@
+                                <tr class='tableRowOdd'><th>@_marital-status-labels_@</th><td>@_marital-status-values_@</td></tr>
+                                @@SECTION@@
+                                <tr class='tableRowEven'><th>@_marital-status-labels_@</th><td>@_marital-status-values_@</td></tr>
+                                @@END_TABLE@@
+                         </table>
+
+                </td>
+                <td  valign='top'>
+                        <h3>Tenure Type (TENURE)</h3>
+                        <table  class='dataTable'>
+                                @@TABLE@@
+                                <tr class='tableRowOdd'><th>@_tenure-type-labels_@</th><td>@_tenure-type-values_@</td></tr>
+                                @@SECTION@@
+                                <tr class='tableRowEven'><th>@_tenure-type-labels_@</th><td>@_tenure-type-values_@</td></tr>
+                                @@END_TABLE@@
+                        </table>
+
+                </td>          
+                <td  valign='top'>
+                        <h3>Economic status indicator (ECOTYPBU)</h3>
+                        <table  class='dataTable'>
+                                @@TABLE@@
+                                <tr class='tableRowOdd'><th>@_benefit-unit-economic-status-labels_@</th><td>@_benefit-unit-economic-status-values_@</td></tr>
+                                @@SECTION@@
+                                <tr class='tableRowEven'><th>@_benefit-unit-economic-status-labels_@</th><td>@_benefit-unit-economic-status-values_@</td></tr>
+                                @@END_TABLE@@
+                        </table>
+               </td>
+                <td  valign='top'>
+                        <h3>Family type (FAMTHBAI)</h3>
+                        <table  class='dataTable'>
+                                @@TABLE@@
+                                <tr class='tableRowOdd'><th>@_hbai-benefit-unit-type-labels_@</th><td>@_hbai-benefit-unit-type-values_@</td></tr>
+                                @@SECTION@@
+                                <tr class='tableRowEven'><th>@_hbai-benefit-unit-type-labels_@</th><td>@_hbai-benefit-unit-type-values_@</td></tr>
+                                @@END_TABLE@@
+                        </table>
+               </td>               
+        </tr>
+        <tr>
+                <td  valign='top' width='25%'>
+                        <h3>Ethnicity of the Head of BU (BUETHGRP)</h3>
+                        <table  class='dataTable'>
+                                @@TABLE@@
+                                <tr class='tableRowOdd'><th>@_ethnic-labels_@</th><td>@_ethnic-values_@</td></tr>
+                                @@SECTION@@
+                                <tr class='tableRowEven'><th>@_ethnic-labels_@</th><td>@_ethnic-values_@</td></tr>
+                                @@END_TABLE@@
+                         </table>
+                </td>
+                <td valign='top'  width='25%'>
+                        <h3>Gender of Head of Benefit Unit</h3>
+                        <table  class='dataTable'>
+                                @@TABLE@@
+                                <tr class='tableRowOdd'><th>@_gender-labels_@</th><td>@_gender-values_@</td></tr>
+                                @@SECTION@@
+                                <tr class='tableRowEven'><th>@_gender-labels_@</th><td>@_gender-values_@</td></tr>
+                                @@END_TABLE@@
+                        
+                         </table>
+
+                </td>
+                <td  valign='top' width='25%'>
+                        <h3>Blindness ,disability indicator (DISINDHB)</h3>
+                        <table  class='dataTable'>
+                                @@TABLE@@
+                                <tr class='tableRowOdd'><th>@_bu-disabled-indicator-labels_@</th><td>@_bu-disabled-indicator-values_@</td></tr>
+                                @@SECTION@@
+                                <tr class='tableRowEven'><th>@_bu-disabled-indicator-labels_@</th><td>@_bu-disabled-indicator-values_@</td></tr>
+                                @@END_TABLE@@
+                        </table>
+                     </td>
+                     <td  valign='top' width='25%'>
+                        <h3>Regional Stratifier (SSTRTREG)</h3>
+                        <table  class='dataTable'>
+                                @@TABLE@@
+                                <tr class='tableRowOdd'><th>@_regional-stratifier-labels_@</th><td>@_regional-stratifier-values_@</td></tr>
+                                @@SECTION@@
+                                <tr class='tableRowEven'><th>@_regional-stratifier-labels_@</th><td>@_regional-stratifier-values_@</td></tr>
+                                @@END_TABLE@@
+                        </table>
+                     </td>
+                     <td  valign='top' width='25%'>
+                        <h3>Age Group of nhaed</h3>
+                        <table  class='dataTable'>
+                                @@TABLE@@
+                                <tr class='tableRowOdd'><th>@_age-group-labels_@</th><td>@_age-group-values_@</td></tr>
+                                @@SECTION@@
+                                <tr class='tableRowEven'><th>@_age-group-labels_@</th><td>@_age-group-values_@</td></tr>
+                                @@END_TABLE@@
+                        </table>
+                     </td>
+
+                </tr>
+</table>
+</form>
+<form action='/examples/'>
+
+
+
+</form>
+</div>
+@@INCLUDE@@ footer.inc
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+@@INCLUDE@@ header.inc  "Allowable Expenses"
+<body>
+<div class="mainbody">
+<div class="header">
+    <h1>SCOTTISH LEGAL AID MODEL</h1>
+</div>
+
+<div class='menu'>
+ <a href="/slab/intro_page.thtml"> Home </a> &#187; Change Parameters &#171;  <a href="/slab/output/?action=display&amp;compare=totals"> View Results</a></div>
+<div class='submenu'>
+<a href="/slab/actions/?page=income_limits"> Income and Capital Limits</a> &bull;<a href="/slab/actions/?page=capital_disregards">Capital Disregards </a>  &bull; 
+<a href="/slab/actions/?page=incomes_and_passporting"> Incomes and Passporting</a> &bull; <a href="/slab/actions/?page=allowable_expenses"> Allowable Expenses</a>
+&bull; &#187;Housing Costs &#171;   &bull;
+<a href="/slab/actions/?page=contributions">Contributions</a>
+
+</div>
+
+
+
+<div class="contents">
+        <form action="/slab/actions/">
+        <input type='hidden' name='frm_housing' value='frm_housing' />
+
+<h3>Allowable Housing Costs</h3>
+<p><em>@_run-name_@</em></p>
+
+<p>
+Set the radio button to 'percentage' if you want to allow a proportion (1=all 0=none) of that item. Set to flat-rate if you
+want to set a maximum amount instead, and enter the maximum (p.a.) in the box on the right.
+</p>
+<table>
+<tr class="tableRowEven"><td align="right">Mortgages</td><td>@_housing_allowances-mortgages-is_flat_@</td><td>@_housing_allowances-mortgages-amount_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Council Tax</td><td>@_housing_allowances-council_tax-is_flat_@</td><td>@_housing_allowances-council_tax-amount_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Water Rates</td><td>@_housing_allowances-water_rates-is_flat_@</td><td>@_housing_allowances-water_rates-amount_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Ground Rent</td><td>@_housing_allowances-ground_rent-is_flat_@</td><td>@_housing_allowances-ground_rent-amount_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Service Charges</td><td>@_housing_allowances-service_charges-is_flat_@</td><td>@_housing_allowances-service_charges-amount_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Repairs And Insurance</td><td>@_housing_allowances-repairs_and_insurance-is_flat_@</td><td>@_housing_allowances-repairs_and_insurance-amount_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Rent</td><td>@_housing_allowances-rent-is_flat_@</td><td>@_housing_allowances-rent-amount_@</td></tr>
+
+<tr class="tableRowOdd"><td align="right">Rent Rebates</td><td>@_housing_allowances-rent_rebates-is_flat_@</td><td>@_housing_allowances-rent_rebates-amount_@</td></tr>
+
+<tr class="tableRowEven"><td align="right">Council Tax Rebates</td><td>@_housing_allowances-council_tax_rebates-is_flat_@</td><td>@_housing_allowances-council_tax_rebates-amount_@</td></tr>
+</table>
+
+<table>
+
+<tr class="tableRowEven"><td align="right">Single Persons Housing Costs Maximum (English System)</td><td>@_single_persons_housing_costs_max_@</td></tr>
+
+</table>
+
+
+         <input type='hidden' name='page' value='housing' />
+@@INCLUDE@@ submit.inc
+        </form>
+</div>
+@@INCLUDE@@ footer.inc
+</div>
+</body>
+</html>

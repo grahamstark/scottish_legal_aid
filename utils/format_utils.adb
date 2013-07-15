@@ -1,0 +1,170 @@
+--
+-- $Revision $
+-- $Author $
+-- $Date $
+--
+-- format numbers with 2 decimal places and optional commas
+--
+--
+with Ada.Text_IO.Editing;
+with Ada.Strings.Fixed;   use Ada.Strings.Fixed;
+with Ada.Strings;         use Ada.Strings;
+
+package body format_utils is
+
+   package Str renames Ada.Strings;
+
+   package Decimal_Format is new Ada.Text_IO.Editing.Decimal_Output (
+      Num => money,
+      Default_Currency => "",
+      Default_Fill => ' ',
+      Default_Separator => ',',
+      Default_Radix_Mark => '.');
+
+   MONEY_PICTURE  : constant Ada.Text_IO.Editing.Picture :=
+      Ada.Text_IO.Editing.To_Picture ("-ZZZ_ZZZZ_ZZZ_ZZ9.99");
+   COUNTS_PICTURE : constant Ada.Text_IO.Editing.Picture :=
+      Ada.Text_IO.Editing.To_Picture ("-ZZZ_ZZZZ_ZZZ_ZZ9");
+
+   function format_counts (m : money) return String is
+   begin
+      if (not Decimal_Format.Valid (m, COUNTS_PICTURE)) then
+         return "infinity";
+      end if;
+      return Trim (Decimal_Format.Image (m, COUNTS_PICTURE), Side => Both);
+   end format_counts;
+
+   function format_with_commas (i : Integer) return String is
+      m : money;
+   begin
+      m := money (i);
+      if (not Decimal_Format.Valid (m, COUNTS_PICTURE)) then
+         return "infinity";
+      end if;
+      return Trim (Decimal_Format.Image (m, COUNTS_PICTURE), Side => Both);
+   end format_with_commas;
+
+   function format_with_commas (m : money) return String is
+   begin
+      if (not Decimal_Format.Valid (m, COUNTS_PICTURE)) then
+         return "infinity";
+      end if;
+      return Trim (Decimal_Format.Image (m, MONEY_PICTURE), Side => Both);
+   end format_with_commas;
+
+   function format_with_commas (r : real) return String is
+      m : money;
+   begin
+      m := money (r);
+      if (not Decimal_Format.Valid (m, COUNTS_PICTURE)) then
+         return "infinity";
+      end if;
+      return format_with_commas (m);
+   end format_with_commas;
+
+   function format (m : money) return String is
+   begin
+      return Trim (m'Img, Side => Str.Both);
+   end format;
+
+   function format (r : real) return String is
+   begin
+      return format (money (r));
+   end format;
+   
+   function format (r : sreal) return String is
+   begin
+      return format (money (r));
+   end format;
+
+   function format (i : Integer) return String is
+   begin
+      return Trim (i'Img, Side => Str.Both);
+   end format;
+
+   procedure validate
+     (inputStr : String;
+      val      : in out money;
+      message  : in out Bounded_String;
+      min      : money := money'First;
+      max      : money := money'Last)
+   is
+   begin
+      val     := money'Value (inputStr);
+      message := To_Bounded_String ("");
+      if (val > max) then
+         message := To_Bounded_String ("This should be no more than " & max'Img);
+      end if;
+      if (val < min) then
+         message := To_Bounded_String ("This needs to be at least " & min'Img);
+      end if;
+   exception
+      when others =>
+         message := To_Bounded_String ("This is not a valid decimal number");
+   end validate;
+
+   procedure validate
+     (inputStr : String;
+      val      : in out real;
+      message  : in out Bounded_String;
+      min      : real := real'First;
+      max      : real := real'Last)
+   is
+   begin
+      val     := real'Value (inputStr);
+      message := To_Bounded_String ("");
+      if (val > max) then
+         message := To_Bounded_String ("This should be no more than " & format (max));
+      end if;
+      if (val < min) then
+         message := To_Bounded_String ("This needs to be at least " & format (min));
+      end if;
+   exception
+      when others =>
+         message := To_Bounded_String ("This is not a valid real number");
+   end validate;
+
+   procedure validate
+     (inputStr : String;
+      val      : in out Integer;
+      message  : in out Bounded_String;
+      min      : Integer := Integer'First;
+      max      : Integer := Integer'Last)
+   is
+   begin
+      val     := Integer'Value (inputStr);
+      message := To_Bounded_String ("");
+      if (val > max) then
+         message := To_Bounded_String ("This should be no more than " & max'Img);
+      end if;
+      if (val < min) then
+         message := To_Bounded_String ("This needs to be at least " & min'Img);
+      end if;
+   exception
+      when others =>
+         message := To_Bounded_String ("This is not a valid integer");
+   end validate;
+
+   --          procedure validate
+   --                 (inputStr : String;
+   --                  val      : in out modelint;
+   --                  message  : in out Bounded_String;
+   --                  min      : modelint := modelint'First;
+   --                  max      : modelint := modelint'Last)
+   --          is
+   --          begin
+   --                  val     := modelint'Value (inputStr);
+   --                  message := to_bounded_string("");
+   --                  if (val > max) then
+   --                          message := to_bounded_string("This should be no more than " &
+   --max'Img);
+   --                  end if;
+   --                  if (val < min) then
+   --                          message := to_bounded_string("This needs to be at least " & min'Img);
+   --                  end if;
+   --          exception
+   --                  when others =>
+   --                          message := to_bounded_string("This is not a valid integer");
+   --          end validate;
+
+end format_utils;

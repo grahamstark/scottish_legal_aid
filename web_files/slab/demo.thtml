@@ -1,0 +1,247 @@
+@@INCLUDE@@ header.inc  "PAGE 1"
+<body>
+<div class="mainbody">
+<div class="header">
+    <h1>SCOTTISH LEGAL AID MODEL</h1>
+</div>
+
+<div class='menu'>
+ &#187; Home &#171;  <a href="quick.php"> Quick Run</a> &bull; <a href="params.php"> Change Parameters</a>  &bull; <a href="detailed.php"> View Results</a>  &bull; <a href="information.php"> Information and Feedback</a> </div>
+
+
+<div class="contents">
+        <form action="/slab/actions/">
+        <img src='/images/ph01.jpg' alt='something' />
+<table>        
+ <tr class="tableRowEven"><td align="right">Lower Income Limit</td><td>@_lowerLimit-income-normalClaim_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Upper Income Limit</td><td>@_upperLimit-income-normalClaim_@</td></tr>
+<tr class="tableRowEven"><td align="right">Gross Income Limit</td><td>@_grossIncomeLimit_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Capital: Lower Limit; normal claim </td><td>@_lowerLimit-capital-normalClaim_@</td></tr>
+<tr class="tableRowEven"><td align="right">Capital: Upper Limit; normal claim </td><td>@_upperLimit-capital-normalClaim_@</td></tr>
+<tr class="tableRowOdd"><td align="right">First Child Age Limit </td><td>@_allow-income-childAgeLimit-1_@</td></tr>
+<tr class="tableRowEven"><td align="right">2nd Child Age Limit </td><td>@_allow-income-childAgeLimit-2_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Top Child Age Limit </td><td>@_allow-income-childAgeLimit-3_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_allow-income-childAllowance-1_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_allow-income-childAllowance-2_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_allow-income-childAllowance-3_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Partner's Allowance</td><td>@_allow-income-partnersAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right">Other Dependent's allowance</td><td>@_allow-income-otherDependantsAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Pensioner Age Limit (Males)</td><td>@_pensionerAgeLimit-male_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Age Limit (Females)</td><td>@_pensionerAgeLimit-female_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Pensioner Capital Disregard [1]</td><td>@_capitalDisregard-pensioner-disregard1_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Pensioner Income Limit [1]</td><td>@_capitalDisregard-pensioner-incomeLimit1_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Capital Disregard [2]</td><td>@_capitalDisregard-pensioner-disregard2_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Income Limit [2]</td><td>@_capitalDisregard-pensioner-incomeLimit2_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Pensioner Capital Disregard [3]</td><td>@_capitalDisregard-pensioner-disregard3_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Pensioner Income Limit [3]</td><td>@_capitalDisregard-pensioner-incomeLimit3_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Capital Disregard [4]</td><td>@_capitalDisregard-pensioner-disregard4_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Income Limit [4]</td><td>@_capitalDisregard-pensioner-incomeLimit4_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Pensioner Capital Disregard [5]</td><td>@_capitalDisregard-pensioner-disregard5_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Pensioner Income Limit [5]</td><td>@_capitalDisregard-pensioner-incomeLimit5_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Capital Disregard [6]</td><td>@_capitalDisregard-pensioner-disregard6_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Income Limit [6]</td><td>@_capitalDisregard-pensioner-incomeLimit6_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Pensioner Capital Disregard [7]</td><td>@_capitalDisregard-pensioner-disregard7_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Pensioner Income Limit [7]</td><td>@_capitalDisregard-pensioner-incomeLimit7_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Capital Disregard [8]</td><td>@_capitalDisregard-pensioner-disregard8_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Income Limit [8]</td><td>@_capitalDisregard-pensioner-incomeLimit8_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Pensioner Capital Disregard [9]</td><td>@_capitalDisregard-pensioner-disregard9_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Pensioner Income Limit [9]</td><td>@_capitalDisregard-pensioner-incomeLimit9_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Capital Disregard [10]</td><td>@_capitalDisregard-pensioner-disregard10_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensioner Income Limit [10]</td><td>@_capitalDisregard-pensioner-incomeLimit10_@</td></tr>
+<tr class="tableRowEven"><td align="right">Wages</td><td>@_incomesList-wages_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-wages_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Luncheon Vouchers</td><td>@_incomesList-luncheonVouchers_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-luncheonVouchers_@</td></tr>
+<tr class="tableRowEven"><td align="right">Self Employment</td><td>@_incomesList-selfEmployment_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-selfEmployment_@</td></tr>
+<tr class="tableRowOdd"><td align="right">InvestmentIncome</td><td>@_incomesList-investmentIncome_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-investmentIncome_@</td></tr>
+<tr class="tableRowEven"><td align="right">Pensions</td><td>@_incomesList-pensions_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-pensions_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Other Income</td><td>@_incomesList-otherIncome_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-otherIncome_@</td></tr>
+<tr class="tableRowEven"><td align="right">Income Tax</td><td>@_incomesList-incomeTax_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-incomeTax_@</td></tr>
+<tr class="tableRowOdd"><td align="right">National Insurance</td><td>@_incomesList-nationalInsurance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-nationalInsurance_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Disability Living Allowance</td><td>@_incomesList-disabilityLivingAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-disabilityLivingAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-disabilityLivingAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right">Attendance Allowance</td><td>@_incomesList-attendanceAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-attendanceAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-attendanceAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Constant Attendance Allowance</td><td>@_incomesList-constantAttendanceAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-constantAttendanceAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-constantAttendanceAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right">Social Fund</td><td>@_incomesList-socialFund_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-socialFund_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-socialFund_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Child Benefit</td><td>@_incomesList-childBenefit_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-childBenefit_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-childBenefit_@</td></tr>
+<tr class="tableRowEven"><td align="right">Guaranteed Pension Credit</td><td>@_incomesList-guaranteedPensionCredit_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-guaranteedPensionCredit_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-guaranteedPensionCredit_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Savings Pension Credit</td><td>@_incomesList-savingsPensionCredit_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-savingsPensionCredit_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-savingsPensionCredit_@</td></tr>
+<tr class="tableRowEven"><td align="right">Retirement Pension</td><td>@_incomesList-retirementPension_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-retirementPension_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-retirementPension_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Widows Pensions</td><td>@_incomesList-widowsPensions_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-widowsPensions_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-widowsPensions_@</td></tr>
+<tr class="tableRowEven"><td align="right">Income Support</td><td>@_incomesList-incomeSupport_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-incomeSupport_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-incomeSupport_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Maternity Allowance</td><td>@_incomesList-maternityAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-maternityAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-maternityAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right">Widowed Mothers Allowance</td><td>@_incomesList-widowedMothersAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-widowedMothersAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-widowedMothersAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right">War Disablement Pension</td><td>@_incomesList-warDisablementPension_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-warDisablementPension_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-warDisablementPension_@</td></tr>
+<tr class="tableRowEven"><td align="right">War Widow Pension</td><td>@_incomesList-warWidowPension_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-warWidowPension_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-warWidowPension_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Severe Disability Allowance</td><td>@_incomesList-severeDisabilityAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-severeDisabilityAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-severeDisabilityAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right">Disabled Persons Tax Credit</td><td>@_incomesList-disabledPersonsTaxCredit_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-disabledPersonsTaxCredit_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-disabledPersonsTaxCredit_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Invalid Care Allowance</td><td>@_incomesList-invalidCareAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-invalidCareAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-invalidCareAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right">Income RelatedJobseekers Allowance</td><td>@_incomesList-incomeRelatedJobseekersAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-incomeRelatedJobseekersAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-incomeRelatedJobseekersAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Contributory Jobseekers Allowance</td><td>@_incomesList-contributoryJobseekersAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-contributoryJobseekersAllowance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-contributoryJobseekersAllowance_@</td></tr>
+<tr class="tableRowEven"><td align="right">Industrial Injury Disablemen tBenefit</td><td>@_incomesList-industrialInjuryDisablementBenefit_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-industrialInjuryDisablementBenefit_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-industrialInjuryDisablementBenefit_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Incapacity Benefit</td><td>@_incomesList-incapacityBenefit_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-incapacityBenefit_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-incapacityBenefit_@</td></tr>
+<tr class="tableRowEven"><td align="right">Working Families Tax Credit</td><td>@_incomesList-workingFamiliesTaxCredit_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-workingFamiliesTaxCredit_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-workingFamiliesTaxCredit_@</td></tr>
+<tr class="tableRowOdd"><td align="right">New Deal</td><td>@_incomesList-newDeal_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-newDeal_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-newDeal_@</td></tr>
+<tr class="tableRowEven"><td align="right">Social Fund Payments</td><td>@_incomesList-socialFundPayments_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-socialFundPayments_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-socialFundPayments_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Working Tax Credit</td><td>@_incomesList-workingTaxCredit_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-workingTaxCredit_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-workingTaxCredit_@</td></tr>
+<tr class="tableRowEven"><td align="right">Child Tax Credit</td><td>@_incomesList-childTaxCredit_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-childTaxCredit_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-childTaxCredit_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Any Other Benefit</td><td>@_incomesList-anyOtherBenefit_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-anyOtherBenefit_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-anyOtherBenefit_@</td></tr>
+<tr class="tableRowEven"><td align="right">Widows Payment</td><td>@_incomesList-widowsPayment_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-widowsPayment_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-widowsPayment_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Unemployment Redundancy Insurance</td><td>@_incomesList-unemploymentRedundancyInsurance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-unemploymentRedundancyInsurance_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-unemploymentRedundancyInsurance_@</td></tr>
+<tr class="tableRowEven"><td align="right">Winter Fuel Payments</td><td>@_incomesList-winterFuelPayments_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-winterFuelPayments_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-winterFuelPayments_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Rent Rebates</td><td>@_incomesList-rentRebates_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-rentRebates_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_passportBenefits-rentRebates_@</td></tr>
+<tr class="tableRowEven"><td align="right">Rate Rebates</td><td>@_incomesList-rateRebates_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-rateRebates_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_passportBenefits-rateRebates_@</td></tr>
+<tr class="tableRowOdd"><td align="right">tradeUnion</td><td>@_incomesList-tradeUnion_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-tradeUnion_@</td></tr>
+<tr class="tableRowEven"><td align="right">friendlySocietyBenefits</td><td>@_incomesList-friendlySocietyBenefits_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-friendlySocietyBenefits_@</td></tr>
+<tr class="tableRowOdd"><td align="right">privateSicknessScheme</td><td>@_incomesList-privateSicknessScheme_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-privateSicknessScheme_@</td></tr>
+<tr class="tableRowEven"><td align="right">accidentInsuranceScheme</td><td>@_incomesList-accidentInsuranceScheme_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-accidentInsuranceScheme_@</td></tr>
+<tr class="tableRowOdd"><td align="right">hospitalSavingsScheme</td><td>@_incomesList-hospitalSavingsScheme_@</td></tr>
+<tr class="tableRowOdd"><td align="right"></td><td>@_grossIncomesList-hospitalSavingsScheme_@</td></tr>
+<tr class="tableRowEven"><td align="right">healthInsurance</td><td>@_incomesList-healthInsurance_@</td></tr>
+<tr class="tableRowEven"><td align="right"></td><td>@_grossIncomesList-healthInsurance_@</td></tr>
+<tr class="tableRowEven"><td align="right">Contribution Proportion [1]</td><td>@_contributions-income-contributionProportion1_@</td></tr>
+<tr class="tableRowEven"><td align="right">Band [1]</td><td>@_contributions-income-contributionProportion1_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Contribution Proportion [2]</td><td>@_contributions-income-contributionProportion2_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Band [2]</td><td>@_contributions-income-contributionProportion2_@</td></tr>
+<tr class="tableRowEven"><td align="right">Contribution Proportion [3]</td><td>@_contributions-income-contributionProportion3_@</td></tr>
+<tr class="tableRowEven"><td align="right">Band [3]</td><td>@_contributions-income-contributionProportion3_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Capital Contribution Proportion [1]</td><td>@_contributions-capital-contributionProportion1_@</td></tr>
+<tr class="tableRowOdd"><td align="right">Band [1]</td><td>@_contributions-capital-contributionProportion1_@</td></tr>
+<tr class="tableRowEven"><td align="right">travelExpenses</td><td>@_allowableExpenses-travelExpenses-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">travelExpenses</td><td>@_allowableExpenses-travelExpenses-amount_@</td></tr>
+<tr class="tableRowOdd"><td align="right">pension</td><td>@_allowableExpenses-pension-isFlat_@</td></tr>
+<tr class="tableRowOdd"><td align="right">pension</td><td>@_allowableExpenses-pension-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">avcs</td><td>@_allowableExpenses-avcs-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">avcs</td><td>@_allowableExpenses-avcs-amount_@</td></tr>
+<tr class="tableRowOdd"><td align="right">unionFees</td><td>@_allowableExpenses-unionFees-isFlat_@</td></tr>
+<tr class="tableRowOdd"><td align="right">unionFees</td><td>@_allowableExpenses-unionFees-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">childMinding</td><td>@_allowableExpenses-childMinding-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">childMinding</td><td>@_allowableExpenses-childMinding-amount_@</td></tr>
+<tr class="tableRowOdd"><td align="right">friendlySocs</td><td>@_allowableExpenses-friendlySocs-isFlat_@</td></tr>
+<tr class="tableRowOdd"><td align="right">friendlySocs</td><td>@_allowableExpenses-friendlySocs-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">sports</td><td>@_allowableExpenses-sports-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">sports</td><td>@_allowableExpenses-sports-amount_@</td></tr>
+<tr class="tableRowOdd"><td align="right">loanRepayments</td><td>@_allowableExpenses-loanRepayments-isFlat_@</td></tr>
+<tr class="tableRowOdd"><td align="right">loanRepayments</td><td>@_allowableExpenses-loanRepayments-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">medicalInsurance</td><td>@_allowableExpenses-medicalInsurance-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">medicalInsurance</td><td>@_allowableExpenses-medicalInsurance-amount_@</td></tr>
+<tr class="tableRowOdd"><td align="right">charities</td><td>@_allowableExpenses-charities-isFlat_@</td></tr>
+<tr class="tableRowOdd"><td align="right">charities</td><td>@_allowableExpenses-charities-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">maintenancePayments</td><td>@_allowableExpenses-maintenancePayments-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">maintenancePayments</td><td>@_allowableExpenses-maintenancePayments-amount_@</td></tr>
+<tr class="tableRowOdd"><td align="right">sharedRent</td><td>@_allowableExpenses-sharedRent-isFlat_@</td></tr>
+<tr class="tableRowOdd"><td align="right">sharedRent</td><td>@_allowableExpenses-sharedRent-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">studentExpenses</td><td>@_allowableExpenses-studentExpenses-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">studentExpenses</td><td>@_allowableExpenses-studentExpenses-amount_@</td></tr>
+<tr class="tableRowOdd"><td align="right">loanRepayments </td><td>@_allowableFinance-loanRepayments-isFlat_@</td></tr>
+<tr class="tableRowOdd"><td align="right">loanRepayments </td><td>@_allowableFinance-loanRepayments-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">finesAndTransfers </td><td>@_allowableFinance-finesAndTransfers-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">finesAndTransfers </td><td>@_allowableFinance-finesAndTransfers-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">mortgages</td><td>@_housingAllowances-mortgages-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">mortgages</td><td>@_housingAllowances-mortgages-amount_@</td></tr>
+<tr class="tableRowOdd"><td align="right">rates</td><td>@_housingAllowances-rates-isFlat_@</td></tr>
+<tr class="tableRowOdd"><td align="right">rates</td><td>@_housingAllowances-rates-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">waterRates</td><td>@_housingAllowances-waterRates-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">waterRates</td><td>@_housingAllowances-waterRates-amount_@</td></tr>
+<tr class="tableRowOdd"><td align="right">groundRent</td><td>@_housingAllowances-groundRent-isFlat_@</td></tr>
+<tr class="tableRowOdd"><td align="right">groundRent</td><td>@_housingAllowances-groundRent-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">serviceCharges</td><td>@_housingAllowances-serviceCharges-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">serviceCharges</td><td>@_housingAllowances-serviceCharges-amount_@</td></tr>
+<tr class="tableRowOdd"><td align="right">repairsAndInsurance</td><td>@_housingAllowances-repairsAndInsurance-isFlat_@</td></tr>
+<tr class="tableRowOdd"><td align="right">repairsAndInsurance</td><td>@_housingAllowances-repairsAndInsurance-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">rent</td><td>@_housingAllowances-rent-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">rent</td><td>@_housingAllowances-rent-amount_@</td></tr>
+<tr class="tableRowOdd"><td align="right">rentRebates</td><td>@_housingAllowances-rentRebates-isFlat_@</td></tr>
+<tr class="tableRowOdd"><td align="right">rentRebates</td><td>@_housingAllowances-rentRebates-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">rateRebates</td><td>@_housingAllowances-rateRebates-isFlat_@</td></tr>
+<tr class="tableRowEven"><td align="right">rateRebates</td><td>@_housingAllowances-rateRebates-amount_@</td></tr>
+<tr class="tableRowEven"><td align="right">singlePersonsHousingCostsMax</td><td>@_singlePersonsHousingCostsMax_@</td></tr>       
+</table> 
+         <input type='hidden' name='page' value='demo' />
+        <tr>
+                <td><input type='submit' name="action" value='save' /></td>
+                <td><input type='submit' name="action" value='run' /></td>
+                <td><input type='submit' name="action" value='reset' /></td>
+                <td><input type='submit' name="action" value='english' /></td>
+        </tr>
+        </table>
+
+        </form>
+</div>
+@@INCLUDE@@ footer.inc  "PAGE 1"
+</div>
+</body>
+</html>

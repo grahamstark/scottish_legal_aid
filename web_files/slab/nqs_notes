@@ -1,0 +1,25 @@
+
+  Generic NQS will be installed into the following directories :
+
+  o  End-user utilities        : /usr/local/bin
+  o  NQS daemons + admin tools : /usr/local/sbin
+  o  NQS spool files           : /var/spool/nqs
+  o  NQS manual pages          : /usr/local/man
+  o  NQS machine id database   : /usr/local/lib/nqs/nmap
+  o  NQS accounting records    : /var/spool/nqs/acct
+  o  Staged NQS installations  : /usr/local/lib/nqs/stage
+  o  qmgr help file            : /usr/local/lib/nqs/qmgr.hlp
+  o  Misc NQS files            : /usr/local/lib/nqs
+You can control the amount of information Generic NQS sends to the logfile
+  by changing the debugging level; this is done using 'qmgr set debug <value>'.
+
+    Value | Output Produced
+    ------------------------------------------------
+      0   | Fatal error messages only.
+      1   | + General information.
+      2   | + High-priority debugging information.
+      3   | + Medium-priority debugging information.
+      4   | + Low-priority debugging information.
+      5   | + Temporary debugging information.
+
+      qmgr.c remove "static" references around line 367

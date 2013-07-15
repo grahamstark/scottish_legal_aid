@@ -1,0 +1,119 @@
+@@INCLUDE@@ header.inc  "Income and Capital Limits"
+<body>
+<div class="mainbody">
+<div class="header">
+    <h1>SCOTTISH LEGAL AID MODEL</h1>
+</div>
+
+<div class='menu'>
+<a href="/slab/intro_page.thtml"> Home </a> &#187; Change Parameters &#171;  <a href="/slab/output/?action=display&amp;compare=totals"> View Results</a></div>
+<div class='submenu'>
+ &#187;Income and Capital Limits  &#171; &bull; <a href="/slab/actions/?page=capital_disregards">Capital Disregards</a>  &bull; 
+<a href="/slab/actions/?page=incomes_and_passporting"> Incomes and Passporting</a>  &bull; <a href="/slab/actions/?page=allowable_expenses">Allowable Expenses</a> &bull; 
+<a href="/slab/actions/?page=housing">Housing Costs</a> 
+
+
+</div>
+
+
+
+<div class="contents">
+        <form action="/slab/actions/">
+<h3>Example Household</h3>
+<p><em>@_run-name_@</em></p>
+<table>        
+        <tr class="tableRowOdd">
+                <td colspan='2'>Tenure Type</td><td>@_tenure_type_@</td>
+        </tr>
+        <tr class="tableRowEven">
+                <td>Mortgages</td><td>@_mortgages_@</td>
+                <td>Gross Rates</td><td>@_rates_@</td>
+        </tr>
+        <tr class='tableRowOdd'>
+                <td>Gross Rent</td><td>@_rent_@</td>
+                <td>Home Equity</td><td>@_home-equity_@</td>
+        </tr>
+        <tr class='tableRowEven'>
+                <td>Rent Rebates</td><td>@_rent-rebates_@</td>
+                <td>Rate Rebales</td><td>@_rate-rebates_@</td>
+        </tr>
+</table>
+<h3>First Adult</h3>
+<table>
+        <tr class="tableRowEven">
+                <td align="right">Marital Status</td><td>@_marital-status-head_@</td>
+                <td align="right">Age</td><td>@_age-head_@</td>
+        </tr>
+        <tr class="tableRowOdd">
+                <td align="right">Gender</td><td>@_sex-head_@</td>
+                <td></td><td></td>       
+        </tr>
+        <tr class="tableRowEven">
+                <td align="right">Gross Wages</td><td>@_wages-head_@</td>
+                <td align="right">Gross Self Employment</td><td>@_self-employment-head_@</td>
+        </tr>
+        <tr class="tableRowEven">
+                <td align="right">Investment Income</td><td>@_investment-head_@</td>
+                <td align="right">Gross Self Employment</td><td>@_self-employment-head_@</td>
+        </tr>
+        <tr class="tableRowEven">
+                <td align="right">Income Tax (all sources)</td><td>@_income-tax-head_@</td>
+                <td align="right">NI (all sources)</td><td>@_national-insurance-head_@</td>
+        </tr>
+         <tr class="tableRowEven">
+                <td align="right">Child Benefit</td><td>@_child-benefit-head_@</td>
+                <td align="right">Income Support</td><td>@_income-support-head_@</td>
+        </tr>
+         <tr class="tableRowEven">
+                <td align="right">State Pension</td><td>@_state-pension-head_@</td>
+                <td align="right">Private Pension</td><td>@_private-pension-head_@</td>
+        </tr>
+</table>
+
+<h3>Second Adult</h3>
+<table>
+        <tr class="tableRowEven">
+                <td align="right">Marital Status</td><td>@_marital-status-spouse_@</td>
+                <td align="right">Age</td><td>@_age-spouse_@</td>
+        </tr>
+        <tr class="tableRowOdd">
+                <td align="right">Gender</td><td>@_sex-spouse_@</td>
+                <td></td><td></td>       
+        </tr>
+        <tr class="tableRowEven">
+                <td align="right">Gross Wages</td><td>@_wages-spouse_@</td>
+                <td align="right">Gross Self Employment</td><td>@_self-employment-spouse_@</td>
+        </tr>
+        <tr class="tableRowEven">
+                <td align="right">Investment Income</td><td>@_investment-spouse_@</td>
+                <td align="right">Gross Self Employment</td><td>@_self-employment-spouse_@</td>
+        </tr>
+        <tr class="tableRowEven">
+                <td align="right">Income Tax (all sources)</td><td>@_income-tax-spouse_@</td>
+                <td align="right">NI (all sources)</td><td>@_national-insurance-spouse_@</td>
+        </tr>
+         <tr class="tableRowEven">
+                <td align="right">Child Benefit</td><td>@_child-benefit-spouse_@</td>
+                <td align="right">Income Support</td><td>@_income-support-spouse_@</td>
+        </tr>
+         <tr class="tableRowEven">
+                <td align="right">State Pension</td><td>@_state-pension-spouse_@</td>
+                <td align="right">Private Pension</td><td>@_private-pension-spouse_@</td>
+        </tr>
+</table>
+
+<table>
+         <tr class="tableRowEven">
+                <td align="right">Children</td><td>@_children_@</td></tr>
+        </tr>
+</table>
+
+
+@@INCLUDE@@ submit.inc
+<input type='hidden' name='page' value='example_household' />
+        </form>
+</div>
+@@INCLUDE@@ footer.inc
+</div>
+</body>
+</html>

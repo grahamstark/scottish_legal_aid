@@ -1,0 +1,157 @@
+body{
+		font-family: "Gill Sans", trebuchet ms, verdana, sans-serif;
+		font-size: 12px;
+		line-height: 1.5em;
+		color: white;
+		background:#142424; 
+		margin: 0;
+		padding: 0;
+		text-align: left;
+}
+
+a {
+ text-decoration: none;  color:#99cccc;
+}
+
+a:visited{
+		text-decoration: none;
+		color: #ccc;
+}
+
+.mainbody{
+    width:95%;
+    padding:0.5%;
+    display:block;
+    float:left;
+}
+
+.contents{
+    background:  #123d46; 
+    border:1px solid #dfd;
+    color:white;
+    padding: 0.5%;
+}
+
+.header{
+    height: 60px;
+    background: #062222;
+    margin:0;
+    padding: 1% 1% 0 1%;
+    color:white;
+}
+
+.menu{
+    padding:0.5%;
+    font-size: 12px;
+    color: white;
+    letter-spacing: 0.2em;
+    background-color: #777777;
+}
+
+.submenu{
+    padding: 0.5%;
+    font-size:12px;
+    background:#666;   
+    color: white;  
+    letter-spacing: 0.1em;
+    /*border-top: 1px dashed #ddd;*/
+}
+
+.menu a, .submenu a{
+    color: yellow;   
+}
+
+
+
+.sidearea{
+    width:2%;
+    display:block;
+    float:left;
+    padding: 0.5%;
+    margin: 0.5% 0.5% 0.5% 0;
+    background: #323636;
+    color: white;
+    border: 1px solid #dfd;
+}
+
+.sidearea a:link{
+    color: #369;
+}
+
+h1 { font-weight: normal; font-size:150%; letter-spacing: 6px; }
+h2 { font-weight: bold; font-size:130%; color: white; }
+h2 { font-weight: bold; font-size:110%; color: white; }
+/* turn off borders round images */
+img {
+    border-style: none;       
+}
+
+h1:first-letter{ color:#dfd; font-size:110%; }
+h2:first-letter{ color:#dfd; font-size:110%; }
+h3:first-letter{ color:#dfd; font-size:110%; } 
+
+.footer{
+    text-align:center;
+    font-size:80%;
+}
+
+.sidearea a {    
+     display:block; 
+     /*padding: 4px 8px; 
+     margin:0; */
+	 text-decoration:none; 
+     text-align:left;
+}
+
+.sidearea a:hover { background: #77aaaa; color:white; }
+/*border:1px solid #ebb; padding: 4px 8px; margin:0 }*/
+
+.menu a:hover, .submenu a:hover{ background: #77aaaa; color:white }
+
+a:hover { background-color: #77aaaa; color: white; text-decoration:none }
+
+.nochange{
+    font-weight:bold;
+}
+
+.gaining{
+    font-weight: bold;
+    color:#4A4;
+}
+
+.losing{
+    font-weight: bold;
+    color:#C44;
+}
+
+.macroerror{
+       display:block;
+       font-size: 14px;
+       font-weight: bold;
+       border: 2px solid grey;
+       padding:2%;
+       width:95%;
+       float:left;
+       background: #323636;
+       color: white;
+}
+
+.error{
+    font-size:12px;
+    color: red;
+}
+
+input.changed_input{
+       color: black;
+       background-color: #ddff66;       
+}
+
+input.error_input{
+       color: black;
+       background-color: #fa9;       
+}
+
+input.normal_input{
+       color: black;
+       background-color: #ffe;
+}

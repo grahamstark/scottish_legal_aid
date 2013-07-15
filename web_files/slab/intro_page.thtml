@@ -1,0 +1,135 @@
+@@INCLUDE@@ header.inc  "Scottish Legal Aid: Intro Page"
+<body>
+<div class="mainbody">
+<div class="header">
+    <h1>SCOTTISH LEGAL AID MODEL; HOME</h1>
+</div>
+  
+<div class='menu'>
+&#187; Home &#171;  <a href="/slab/actions/?page=income_limits"> Change Parameters </a> &#187; <a href="/slab/output/?action=display&amp;compare=totals"> View Results</a></div>
+
+ 
+<div class="contents">
+        <form action="/slab/intro/">
+<table width='50%' align='center'>
+        <tr class='tableRowEven'>
+                <td>
+                Name for this session ? (alphanumeric characters, spaces and underscores only, please)
+                </td>
+                <td>
+                @_save-file-name_@
+                </td>
+                </tr>
+                <tr>
+                <td>
+                Welcome to the Scottish Legal Aid Model. Current Status is:
+                <ul>
+                     <li>$Revision: 2441 $</li>
+                     <li>$Date: 2007-03-29 13:12:55 +0100 (Thu, 29 Mar 2007) $</li>
+                     <li>Data years: 2003/4 and 2004/5 pooled</li>
+                     <li>Uprated to: Jan 2007 (except investment incomes Nov 2006)</li>                     
+                </ul>
+                </td>
+        </tr>
+        <!--
+        <tr class='tableRowOdd'>
+                <td>
+                Uprate Data?
+                </td>
+                <td>
+                @_uprate-to-current_@
+                </td>
+        </tr>
+        <tr class='tableRowEven'>
+                <td>
+                Base System Type :
+                </td>
+                <td>
+                @_run-type_@
+                </td>
+        </tr>
+        <tr  class='tableRowOdd'>
+                <td>
+                Optimisation Type :
+                </td>
+                <td>
+                @_target-type_@
+                </td>
+        </tr>
+        <tr class='tableRowEven'>
+                <td>
+                Data Year :                 
+                </td>
+                <td>
+                2003/4 (fixed for now, sorry).              
+                </td>
+        </tr>
+        <tr class='tableRowOdd'>
+                <td>
+                Weight on Disruption (off diagonal elements) (0-1)
+                </td>
+                <td>
+                @_weights-disruption_@
+                </td>
+        </tr>  
+        <tr class='tableRowEven'>
+                <td>
+                Weight on Costs( deviation of totals from base) (0-1)
+                </td>
+                <td>
+                @_weights-cost_@
+                </td>
+        </tr> 
+        <tr class='tableRowOdd'>
+                <td colspan='2'>
+                <em>Remainder is loaded on targetting error</em>
+                </td>
+                
+        </tr>
+        <tr class='tableRowOdd'>
+                <td>Treat Benefit unit members as adversaries 
+                </td>
+                <td>@_split-bus_@</td>
+                
+        </tr>
+        -->
+</table>
+
+
+       <input type='hidden' name='page' value='intro_page' />
+          
+        <h3>Restore Previous Sessions</h3>
+
+        <table>
+       <tr>
+      <td width='24%'></td>
+
+      <td width='50%'>
+        <table >
+           <tr><th>Session Name</th><th>Last Modified</th></tr>
+             @@TABLE@@
+               <tr class='tableRowOdd'><td>@_filenames_@</td><td>@_file-times_@</td><td><input type='submit' name='@_filenames_@' value='restore'/></td><td><input type='submit' name='@_filenames_@' value='delete'/></td></tr>
+             @@SECTION@@
+               <tr class='tableRowEven'><td>@_filenames_@</td><td>@_file-times_@</td><td><input type='submit' name='@_filenames_@' value='restore'/></td><td><input type='submit' name='@_filenames_@' value='delete'/></td></tr>
+             @@END_TABLE@@
+          </table>
+      </td>
+      <td width='24%'></td>
+</tr>
+</table>
+
+  <table width='100%'>
+
+        <tr>
+                <td width='30%'><input type='submit' name="action" value='save' /></td>
+                <td width='30%'><input type='submit' name="action" value='store' /></td>
+        </tr>
+        </table>  
+     
+        
+        </form>
+</div>
+@@INCLUDE@@ footer.inc
+</div>
+</body>
+</html>
